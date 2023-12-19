@@ -1,435 +1,84 @@
-% \documentclass{article}
+\begin{titlepage}
 
-% \documentclass{book}
+% Vẽ hình chữ nhật
 
-\documentclass{report} % Chọn cỡ chữ
+\begin{tikzpicture}[remember picture, overlay]\draw [line width = 3pt]($ (current page.north west) + (3.0cm, - 2.5cm)$)rectangle($ (current page.south east) + (- 2.5cm, 2.5cm)$);\draw [line width = 0.5pt]($ (current page.north west) + (3.1cm, - 2.6cm)$)rectangle($ (current page.south east) + (- 2.6cm, 2.6cm)$);\end{tikzpicture}
 
-\usepackage{contents/start/init}
+\begin{center}
 
-\usepackage{contents/start/vvn}
+\vspace{- 0.4cm}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{ĐẠI HỌC BÁCH KHOA HÀ NỘI} \\
 
-\pagecolor[RGB]{40, 42, 54}% Đặt màu nền
+\textbf{VIỆN TOÁN ỨNG DỤNG VÀ TIN HỌC} \\
 
-\color[RGB]{18, 161, 24} % Đặt màu chữ
+\textbf{******}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{0.8cm}
 
-\begin{document} % Bắt đầu
+\begin{figure}[H]
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\centering
 
-nghĩa miền
+\includegraphics[scale = 0.5]{pictures/hust/main.png}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{figure}
 
-\end{document} % Kết thúc
+\vspace{0.7cm}
 
-% kết luận, tài liệu tham khảo
+\textbf{\fontsize{16pt}{30pt}\selectfont {BÁO CÁO ĐỒ ÁN II}} \\
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \textbf{\fontsize{10pt}{24pt}\selectfont {Chuyên ngành: TOÁN TIN}}
 
-% \input{contents/chapter0/trang_bia}
+\vspace{1cm}
 
-% \input{contents/chapter0/trang_trang}
+\textbf{\fontsize{16pt}{30pt}\selectfont {ĐỀ TÀI:}} \\
 
-% \input{contents/chapter0/trang_bia}
+\textbf{\fontsize{20pt}{24pt}\selectfont {Sử dụng thiết kế hướng miền \\ xây dựng kiến trúc vi dịch vụ cho \\ bài toán hóa đơn điện tử}} \\
 
-% \input{contents/chapter0/trang_trang}
+\end{center}
 
-% \input{contents/chapter0/nhan_xet_cua_giang_vien}
+\vspace{0.3cm}
 
-% \includepdf[pages = -]{contents/chapter0/bao_cao_tien_do_1.pdf}
+% \begin{minipage}{0.8\textwidth}
 
-% \includepdf[pages = -]{contents/chapter0/bao_cao_tien_do_2.pdf}
+\begin{center}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{\fontsize{10pt}{24pt}\selectfont {Chuyên ngành: Toán Tin}}
 
-% \input{contents/chapter0/muc_luc}
+% \textbf{\fontsize{10pt}{24pt}\selectfont {Giảng viên hướng dẫn: TS. Vũ Thành Nam}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{center}
 
-% \input{contents/chapter0/loi_cam_on}
+% \end{minipage}
 
-% \input{contents/chapter0/danh_sach_bang}
+\vspace{0.7cm}
 
-% \input{contents/chapter0/danh_sach_hinh_anh}
+\hspace{3cm}\begin{minipage}{0.7\textwidth}
 
-% \input{contents/chapter0/danh_sach_cac_cum_tu_viet_tat}
+\begin{tabular}{l l l}
 
-% \input{contents/chapter0/danh_sach_cac_thuat_ngu}
+\textbf{\fontsize{10pt}{24pt}\selectfont {Giảng viên hướng dẫn}} & \textbf{\fontsize{10pt}{24pt}\selectfont {TS. Vũ Thành Nam}} \\
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{\fontsize{10pt}{24pt}\selectfont {Sinh viên thực hiện}} & \textbf{\fontsize{10pt}{24pt}\selectfont {Vũ Văn Nghĩa}} \\
 
-% \chapter*{\centering MỞ ĐẦU}
+\textbf{\fontsize{10pt}{24pt}\selectfont {Mã số sinh viên}} & \textbf{\fontsize{10pt}{24pt}\selectfont {20206205}} \\
 
-% \addcontentsline{toc}{chapter}{MỞ ĐẦU}
+\textbf{\fontsize{10pt}{24pt}\selectfont {Lớp}} & \textbf{\fontsize{10pt}{24pt}\selectfont {Toán Tin 02 - K65}} \\
 
-% \section*{Lý do chọn đề tài}
+\end{tabular}
 
-% \input{contents/chapter0/ly_do_chon_de_tai}
+\end{minipage}
 
-% \section*{Đối tượng và phạm vi nghiên cứu}
+\vfill
 
-% \input{contents/chapter0/doi_tuong_va_pham_vi_nghien_cuu}
+\begin{center}
 
-% \section*{Tóm tắt nội dung đồ án}
+\textbf{Hà Nội, \the\year}
 
-% \input{contents/chapter0/tom_tat_noi_dung_do_an}
+% \textbf{Hà Nội, \the\month~/~\the\year}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{center}
 
-% \chapter{Giới thiệu chung}
+\end{titlepage}
 
-% \input{contents/chapter1/gioi_thieu_chung}
-
-% \section{Giới thiệu về bài toán hóa đơn điện tử}
-
-% \input{contents/gioi_thieu_ve_bai_toan_hoa_don_dien_tu}
-
-% \emph{Theo em tìm hiểu có các khái niệm và căn cứ pháp lý liên quan sau đây:}
-
-% \subsection{Hóa đơn}
-
-% \emph{Theo quy định tại khoản 1 Điều 3 Nghị định 123/2020/NĐ - CP:}
-
-% \input{contents/hoa_don}
-
-% \subsection{Hóa đơn điện tử}
-
-% \emph{Theo quy định tại khoản 2 Điều 3 Nghị định 123/2020/NĐ - CP:}
-
-% \input{contents/hoa_don_dien_tu}
-
-% \subsection{Bắt buộc sử dụng hóa đơn điện tử từ 01/07/2022}
-
-% \emph{Theo quy định tại khoản 1 Điều 59 Nghị định 123/2020/NĐ - CP:}
-
-% \input{contents/bat_buoc_su_dung_hoa_don_dien_tu_tu_01072022}
-
-% \subsection{Lưu trữ hóa đơn điện tử}
-
-% \input{contents/luu_tru_hoa_don_dien_tu}
-
-% \subsection{Một số lợi ích của hóa đơn điện tử}
-
-% \input{contents/mot_so_loi_ich_cua_hoa_don_dien_tu}
-
-% Nghiệp vụ?
-
-% UML
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% @ \subsection{chưa xong}
-
-%@ \chapter{Yêu cầu nghiệp vụ}
-
-%@ \input{contents/yeu_cau_nghiep_vu}
-
-%@ \subsection {Yêu cầu nghiệp vụ của bài toán phụ}
-
-%@ \input{contents/yeu_cau_nghiep_vu_cua_bai_toan_phu}
-
-%@ \subsubsection{Các chức năng tổng quan của bài toán phụ}
-
-%@ \input{contents/cac_chuc_nang_tong_quan_cua_bai_toan_phu}
-
-%@ \subsection{Yêu cầu nghiệp vụ chưa xong}
-
-%@ \input{contents/yeu_cau_nghiep_vu_chua_xong}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% @ \subsection{chưa xong}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% @ \subsection{chưa xong}
-
-%! chưa chắc vì mình có mẫu kt sẽ khác
-
-%! chưa chắc vì mình có mẫu kt sẽ khác
-
-%@ \chapter{Phân tích thiết kế hệ thống}
-
-%@ \section{UML Use Case Diagrams}
-
-%@ \section{UML Activity Diagrams}
-
-%@ \section{UML Sequence Diagrams}
-
-%@ \section{UML Class Diagrams}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% @ \subsection{chưa xong}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% @ \subsection{chưa xong}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% @ \subsection{chưa xong}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% @ \subsection{chưa xong}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% @ \subsection{chưa xong}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% @ \subsection{chưa xong}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% @ \subsection{chưa xong}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% @ \subsection{chưa xong}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% @ \subsection{chưa xong}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% @ \subsection{chưa xong}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \section{Giới thiệu về kiến trúc vi dịch vụ}
-
-% \subsection{Kiến trúc nguyên khối}
-
-% \input{contents/kien_truc_nguyen_khoi}
-
-% \subsection{Kiến trúc vi dịch vụ}
-
-% \input{contents/kien_truc_vi_dich_vu}
-
-% \subsection{Một số đặc điểm và ưu điểm của kiến trúc vi dịch vụ}
-
-% \input{contents/mot_so_dac_diem_va_uu_diem_cua_kien_truc_vi_dich_vu}
-
-% \newpage
-
-% \subsection{Một số nhược điểm và thách thức của kiến trúc vi dịch vụ}
-
-% \input{contents/mot_so_nhuoc_diem_va_thach_thuc_cua_kien_truc_vi_dich_vu}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \section{Giới thiệu về thiết kế hướng miền}
-
-% \input{contents/gioi_thieu_ve_thiet_ke_huong_mien}
-
-% \section{Đôi nét về thiết kế hướng miền (Domain Driven Design)}
-
-% \input{contents/doi_net_ve_thiet_ke_huong_mien}
-
-% \input{contents/chuyen_gia_nganh}
-
-% \section{Định nghĩa miền (Domain)}
-
-% \input{contents/dinh_nghia_mien_domain}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \chapter{Chi tiết và áp dụng thiết kế hướng miền}
-
-% \input{contents/chapter20/chi_tiet_va_ap_dung_thiet_ke_huong_mien}
-
-% \section{Các mẫu chiến lược}
-
-% \input{contents/chapter21/cac_mau_chien_luoc}
-
-% \newpage
-
-% \subsection{Miền phụ (Sub - Domain)}
-
-% \input{contents/chapter21/mien_phu_sub_domain}
-
-% \subsubsection{Miền phụ chung (Generic Subdomain)}
-
-% \input{contents/chapter21/mien_phu_chung_generic_subdomain}
-
-% \subsubsection{Miền phụ cốt lõi (Core Subdomain)}
-
-% \input{contents/chapter21/mien_phu_cot_loi_core_subdomain}
-
-% \subsubsection{Miền phụ hỗ trợ (Supporting Subdomain)}
-
-% \input{contents/chapter21/mien_phu_ho_tro_supporting_subdomain}
-
-% \newpage
-
-% \subsubsection{Cách xác định các miền phụ}
-
-% \input{contents/chapter21/cach_xac_dinh_cac_mien_phu}
-
-% \newpage
-
-% \subsubsection{Áp dụng phân loại miền phụ trong đồ án này}
-
-% \input{contents/chapter21/ap_dung_phan_loai_mien_phu_trong_do_an_nay}
-
-% \subsection{Mô hình miền (Domain Models)}
-
-% \input{contents/chapter21/mo_hinh_mien_domain_models}
-
-% \subsection{Bối cảnh giới hạn (Bounded Context)}
-
-% \input{contents/chapter21/boi_canh_gioi_han}
-
-% \subsection{Ngôn ngữ chung (Ubiquitous Language)}
-
-% \input{contents/chapter21/ngon_ngu_chung}
-
-% \subsection{Bản đồ bối cảnh (Context Maps)}
-
-% \input{contents/chapter21/ban_do_boi_canh}
-
-\subsection{Chi tiết về các mối quan hệ bối cảnh giới hạn}
-
-% \input{contents/chapter21/cac_moi_quan_he_boi_canh_gioi_han}
-
-\subsubsection{Mối quan hệ đối xứng (Symmetric Relationship)}
-
-\subparagraph{Mô hình riêng biệt (Separate Ways)}
-
-% \input{contents/mo_hinh_rieng_biet_separate_ways}
-
-\subparagraph{Mô hình hợp tác (Partnership)}
-
-% \input{contents/mo_hinh_hop_tac_partnership}
-
-\subparagraph{Mô hình hạt nhân chung (Shared Kernel)}
-
-% \input{contents/mo_hinh_hat_nhan_chung_shared_kernel}
-
-\paragraph{Mối quan hệ bất đối xứng (Asymmetric Relationship)}
-
-% \input{contents/moi_quan_he_bat_doi_xung_asymmetric_relationship}
-
-\subparagraph{Mô hình khách hàng - nhà cung cấp (Customer - Supplier)}
-
-% \input{contents/mo_hinh_khach_hang_nha_cung_cap_customer_supplier}
-
-\subparagraph{Mô hình tuân thủ (Conformist)}
-
-% \input{contents/mo_hinh_tuan_thu_conformist}
-
-\subparagraph{Mô hình chống đổ vỡ (Anti Corruption Layer)}
-
-% \input{contents/mo_hinh_chong_do_vo_anti_corruption_layer}
-
-\paragraph{Mối quan hệ 1 - nhiều (One to Many Relationship)}
-
-% \input{contents/moi_quan_he_1_nhieu_one_to_many_relationship}
-
-\subparagraph{Dịch vụ máy chủ mở (Open Host Service)}
-
-% \input{contents/dich_vu_may_chu_mo_open_host_srv}
-
-\subparagraph{Ngôn ngữ được xuất bản (Published Language)}
-
-% \input{contents/ngon_ngu_duoc_xuat_ban_published_language}
-
-\subsection{Các mẫu kỹ thuật (Tactical Patterns)}
-
-% Quan hệ đối tác : Đây là mối quan hệ trong đó hai hoặc nhiều bối cảnh giới hạn cộng tác và chia sẻ thông tin. Mối quan hệ hợp tác có thể đạt được thông qua một sự kiện tích hợp hoặc bằng cách gọi một dịch vụ.
-
-% Hạt nhân được chia sẻ : Trong mối quan hệ này, hai bối cảnh giới hạn chia sẻ một lược đồ mô hình, mã hoặc CSDL chung. Các thành phần được chia sẻ phải ổn định, hoàn thiện và được cả hai nhóm đồng ý. Những thay đổi được thực hiện đối với các thành phần dùng chung cần phải được phối hợp cẩn thận để đảm bảo chúng không phá vỡ chức năng của bối cảnh khác.
-
-% Khách hàng - Nhà cung cấp : Đây là mối quan hệ trong đó một bối cảnh giới hạn cung cấp dịch vụ hoặc dữ liệu cho bối cảnh khác. Bối cảnh khách hàng dựa vào bối cảnh nhà cung cấp để có những khả năng hoặc dữ liệu nhất định. Những thay đổi trong bối cảnh nhà cung cấp có thể tác động đến bối cảnh khách hàng, vì vậy điều quan trọng là phải quản lý mối quan hệ này một cách cẩn thận.
-
-% Người theo chủ nghĩa tuân thủ : Mối quan hệ này tồn tại khi một bối cảnh giới hạn tuân theo cùng một ngôn ngữ và khái niệm phổ biến như một bối cảnh giới hạn khác. Điều này đảm bảo rằng giao tiếp giữa hai bối cảnh là rõ ràng và rõ ràng.
-
-% Lớp chống đổ vỡ : Đây là mối quan hệ trong đó ngữ cảnh được giới hạn sử dụng một lớp để dịch giữa ngôn ngữ của chính nó và ngôn ngữ của ngữ cảnh giới hạn khác. Điều này cho phép hai ngữ cảnh giao tiếp với nhau ngay cả khi chúng có từ vựng hoặc mô hình khác nhau.
-
-% Dịch vụ máy chủ mở : Mối quan hệ này xảy ra khi một bối cảnh giới hạn hiển thị một API công khai, mở mà các ngữ cảnh khác có thể sử dụng. Điều này cho phép các ngữ cảnh khác tận dụng chức năng của ngữ cảnh máy chủ theo cách được tiêu chuẩn hóa.
-
-% Ngôn ngữ được xuất bản : Trong mối quan hệ này, một ngữ cảnh giới hạn sẽ xuất bản từ vựng và mô hình của nó cho các ngữ cảnh khác sử dụng. Điều này hữu ích khi nhiều bối cảnh cần cộng tác nhưng không muốn tích hợp trực tiếp. Ngôn ngữ được xuất bản đảm bảo rằng ý nghĩa của các thuật ngữ nhất quán trong mọi ngữ cảnh.
-
-% Các cách riêng biệt : Mối quan hệ này đề cập đến tình huống trong đó hai hoặc nhiều bối cảnh giới hạn không còn có mối quan hệ với nhau và các nhóm chịu trách nhiệm về chúng chọn làm việc độc lập.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\end{document} % Kết thúc
-
-% kết luận, tài liệu tham khảo
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \input{contents/cac_mau_ky_thuat}
-
-\subsubsection{Các đối tượng miền (Domain Object)}
-
-% \input{contents/cac_doi_tuong_mien_domain_object}
-
-\paragraph{Đối tượng thực thể (Entities Objects)}
-
-% \input{contents/doi_tuong_thuc_the_entities_objects}
-
-\paragraph{Đối tượng giá trị (Value Objects)}
-
-% \input{contents/doi_tuong_gia_tri_value_objects}
-
-\paragraph{Miền dịch vụ (Service)}
-
-% \input{contents/mien_dich_vu_srv}
-
-% %! Hướng dẫn 7/4
-
-% %! Hướng dẫn 7/5
-
-% \subsubsection{xxxxxxx}
-
-% \input{contents/_a.tex}
-
-\end{document} % kết thúc
-
-paragraph
-
-% %
-
-% % %! Aggregates/ /
-
-% % Tổng hợp là đối tượng kinh doanh trung tâm trong Bối cảnh giới hạn của chúng ta và xác định phạm vi nhất quán trong bối cảnh giới hạn đó.
-
-% % Tổng hợp = Mã định danh chính của Bối cảnh giới hạn của chúng ta
-
-% \subsubsection{xxxxxxx}
-
-% % \input{contents/_a.tex}
-
-% \end{document} % kết thúc
-
-% Yêu cầu nghiệp vụ của từng sub
-
-% %
-
-% Sơ đồ if else Đ S
-
-% %
-
-% sub trước model
-
-% %
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\end{document}
-
-\section{xxxxxxx}
-
-\subsection{xxxxxxx}
-
-\subsubsection{xxxxxxx}
-
-\input{contents/_a.tex}
-
-% phải có CQRS (Phân chia trách nhiệm truy vấn lệnh)
-
-CQRS là một mẫu kiến trúc riêng biệt có thể được sử dụng kết hợp với thiết kế hướng miền để đạt được những lợi ích nhất định, chẳng hạn như cải thiện hiệu suất và khả năng mở rộng. Tuy nhiên, nó không phải là một yêu cầu để triển khai thiết kế hướng miền.
-
-% phải có event
-
-Ngôn ngữ chung (Ubiquitous Language)
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\end{document} % kết thúc
-
-Cách tiếp cận này nhấn mạnh tính mô - đun, tính linh hoạt và khả năng phục hồi, cho phép các nhóm làm việc đồng thời trên các phần khác nhau của hệ thống và cho phép phát hành nhanh hơn và thường xuyên hơn. Các vi dịch vụ thường dựa vào các giao thức truyền thông nhẹ, chẳng hạn như REST và thường được triển khai bằng các công nghệ chứa trong bộ chứa như Docker và Kubernetes.
-
-\subsubsection{DevOps Ứng dụng, áp dụng, liên quan,....}
-
-\subsubsection{CI/CD}
-
-\subsubsection{Docker}
-
-\subsubsection{Kubernetes}
-
-%@ Tất cả phải dùng ulli

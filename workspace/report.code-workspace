@@ -27,7 +27,7 @@
 "code-runner.executorMap": {
 "python": " clear && cd $dir && python $fileName",
 "markdown": " clear && cd $dir && if [ $fileName = README.md ]; then ( cd ../../workspace/others/push && python push.py ); else ( echo NO ); fi;",
-"latex": " clear && cd $dir && if [ $fileName = main.tex ]; then ( cd tools && python zViewGit.py ); else ( cd ../../tools && python zViewGit.py ); fi;"
+"latex": " clear && cd $dir && if [ $fileName = main.tex ]; then ( cd tools && python zViewGit.py ); else ( cd ../tools && python zViewGit.py ); fi;"
 },
 // Tự động lưu file
 "files.autoSave": "afterDelay",
