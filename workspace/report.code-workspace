@@ -1,11 +1,11 @@
 {
-	"folders": [
-		{
-			"path": ".."
-		},
-		{
-			"path": "../baocao"
-		}
-	],
-	"settings": {"latex-workshop.latex.autoBuild.run": "onFileChange"}
+"folders": [
+{
+"path": ".."
+},
+{
+"path": "../baocao"
+}
+],
+"settings": {"latex-workshop.latex.autoBuild.run": "onFileChange"}
 }
