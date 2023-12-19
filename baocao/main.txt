@@ -1,0 +1,54 @@
+% Giới thiệu chung
+    % Giới thiệu về bài toán hóa đơn điện tử
+        % Hóa đơn
+        % Hóa đơn điện tử
+        % Bắt buộc sử dụng hóa đơn điện tử từ 01/07/2022
+        % Lưu trữ hóa đơn điện tử
+        % Một số lợi ích của hóa đơn điện tử
+        % Nghiệp vụ?
+        % UML
+    % Giới thiệu về kiến trúc vi dịch vụ
+        % Kiến trúc nguyên khối
+        % Kiến trúc vi dịch vụ
+        % Một số đặc điểm và ưu điểm của kiến trúc vi dịch vụ
+        % Một số nhược điểm và thách thức của kiến trúc vi dịch vụ
+    % Giới thiệu về thiết kế hướng miền
+        % Đôi nét về thiết kế hướng miền (DomainDrivenDesign)
+        % Định nghĩa miền (Domain)
+% Chi tiết và áp dụng thiết kế hướng miền
+    % Các mẫu trong thiết kế hướng miền
+    % Các mẫu chiến lược
+    Miền phụ (Sub - Domain)
+    Phân loại các miền phụ
+        Miền phụ chung (Generic Subdomain)
+        Miền phụ cốt lõi (Core Subdomain)
+        Miền phụ hỗ trợ (Supporting Subdomain)
+    Cách xác định các miền phụ
+    Tại sao cần phân loại các miền phụ?
+    Áp dụng phân loại miền phụ trong đồ án này
+Mô hình miền (Domain Models)
+Bối cảnh giới hạn (Bounded Context)
+Ngôn ngữ chung (Ubiquitous Language)
+Bản đồ bối cảnh (Context Maps)
+Các mối quan hệ bối cảnh giới hạn
+    Mối quan hệ đối xứng (Symmetric Relationship)
+        Mô hình riêng biệt (Separate Ways)
+        Mô hình hợp tác (Partnership)
+        Mô hình hạt nhân chung (Shared Kernel)
+    Mối quan hệ bất đối xứng (Asymmetric Relationship)
+        Mô hình khách hàng - nhà cung cấp (Customer - Supplier)
+        Mô hình tuân thủ (Conformist)
+        Mô hình chống đổ vỡ (Anti Corruption Layer)
+    Mối quan hệ 1 - nhiều (One to Many Relationship)
+        Dịch vụ máy chủ mở (Open Host Service)
+        Ngôn ngữ được xuất bản (Published Language)
+% Các mẫu kỹ thuật (Tactical Patterns)
+Các đối tượng miền (Domain Object)
+Đối tượng thực thể (Entities Objects)
+Đối tượng giá trị (Value Objects)
+Miền dịch vụ (Service)
+% Một số...
+DevOps Ứng dụng, áp dụng, liên quan,....
+CI/CD
+Docker
+Kubernetes
