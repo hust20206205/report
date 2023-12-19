@@ -7,7 +7,7 @@ message = "VuVanNghia20206205"
 
 git_path =  os.path.join(os.getcwd(), '../../../')
 init_path =  os.path.join(os.getcwd(), '../../../baocao/contents/start/init.sty')
-workspace_path = os.path.join(os.getcwd(), '../../vvn20206205.code-workspace')
+workspace_path = os.path.join(os.getcwd(), '../../report.code-workspace')
 gitignore_path = os.path.join(git_path, ".gitignore") 
 
 MyGit.chdir(git_path)
