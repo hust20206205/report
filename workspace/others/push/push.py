@@ -6,7 +6,7 @@ from modules.MyView import MyView
 message = "VuVanNghia20206205"
 
 git_path =  os.path.join(os.getcwd(), '../../../')
-init_path =  os.path.join(os.getcwd(), '../../../baocao/start/init.sty')
+# init_path =  os.path.join(os.getcwd(), '../../../baocao/start/init.sty')
 workspace_path = os.path.join(os.getcwd(), '../../vvn20206205.code-workspace')
 gitignore_path = os.path.join(git_path, ".gitignore") 
 
@@ -17,7 +17,7 @@ MyGit.commit(message)
 MyFormat.latex(git_path)
 MyFormat.markdown(git_path)
 MyFormat.basic(gitignore_path)
-MyFormat.basic(init_path)
+# MyFormat.basic(init_path)
 MyFormat.workspace(workspace_path)
 
 MyView.CloseTab()
