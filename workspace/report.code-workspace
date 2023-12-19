@@ -7,5 +7,23 @@
 "path": "../baocao"
 }
 ],
-"settings": {"latex-workshop.latex.autoBuild.run": "onFileChange"}
+"extensions": {
+"recommendations": [
+"formulahendry.code-runner",
+"dracula-theme.theme-dracula",
+"aaron-bond.better-comments",
+"pkief.material-icon-theme",
+"almenon.arepl",
+"ms-python.python",
+"ms-python.vscode-pylance",
+"ms-python.autopep8",
+"fedricknishant.turbo-python-print",
+"james-yu.latex-workshop",
+"christian-kohler.path-intellisense",
+"hediet.vscode-drawio"
+]
+},
+"settings": {
+"latex-workshop.latex.autoBuild.run": "onFileChange"
+}
 }

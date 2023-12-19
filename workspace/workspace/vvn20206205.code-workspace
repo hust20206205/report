@@ -1,0 +1,160 @@
+{
+"folders": [
+{
+"path": ".."
+},
+{
+"path": "../baocao"
+}
+],
+"extensions": {
+"recommendations": [
+"formulahendry.code-runner",
+"dracula-theme.theme-dracula",
+"aaron-bond.better-comments",
+"pkief.material-icon-theme",
+"codeium.codeium",
+"almenon.arepl",
+"ms-python.python",
+"ms-python.vscode-pylance",
+"ms-python.autopep8",
+"fedricknishant.turbo-python-print",
+"james-yu.latex-workshop",
+"christian-kohler.path-intellisense",
+"hediet.vscode-drawio"
+]
+},
+"settings": {
+"code-runner.executorMap": {
+"python": " clear && cd $dir && python $fileName",
+"markdown": " clear && cd $dir && if [ $fileName = README.md ]; then ( cd ../../workspace/others/push && python push.py ); else ( echo NO ); fi;",
+"latex": " clear && cd $dir && if [ $fileName = main.tex ]; then ( cd tools && python zViewGit.py ); else ( cd ../../tools && python zViewGit.py ); fi;",
+},
+// Tự động lưu file
+"files.autoSave": "afterDelay",
+// Cho phép phóng to thu nhỏ
+"editor.mouseWheelZoom": true,
+// Hiển thị các thư mục
+"explorer.compactFolders": false,
+// Sao chép nội dung terminal
+"terminal.integrated.copyOnSelection": true,
+// Bật xóa file vào thùng rác
+"files.enableTrash": true,
+// Không hiển thị xác nhận xóa
+"explorer.confirmDelete": false,
+// Phóng to hoặc thu nhỏ giao diện
+"window.zoomLevel": 1,
+// Tắt hộp thoại xác nhận kéo và thả tệp hoặc thư mục
+"explorer.confirmDragAndDrop": false,
+// Sử dụng mặc định cho terminal trên Windows
+"terminal.integrated.defaultProfile.windows": "Git Bash",
+// Sử dụng mặc định cho terminal trên Linux
+"terminal.integrated.defaultProfile.linux": "bash",
+//
+"git.enableSmartCommit": true,
+"git.confirmSync": false,
+"git.openRepositoryInParentFolders": "always",
+// !extensions
+// Chạy mã trong terminal
+"code-runner.runInTerminal": true,
+// Đường dẫn là "/"
+"code-runner.terminalRoot": "/",
+// Đổi chủ đề màu sắc sang Dracula
+"workbench.colorTheme": "Dracula",
+// "workbench.colorTheme": "Visual Studio Light",
+// Chọn chủ đề biểu tượng là "material-icon-theme"
+"workbench.iconTheme": "material-icon-theme",
+// Chọn gói biểu đồ hiện tại là "nest"
+"material-icon-theme.activeIconPack": "nest",
+"workbench.editorAssociations": {
+"*.drawio.png": "hediet.vscode-drawio",
+"*.png": "imagePreview.previewEditor",
+"*.pdf": "latex-workshop-pdf-hook",
+},
+"material-icon-theme.folders.color": "#ff79b4",
+"material-icon-theme.files.associations": {
+"*.validator.ts": "nest-decorator",
+"README.md": "3d",
+"*.md": "3d"
+},
+"[python]": {
+"editor.defaultFormatter": "ms-python.autopep8"
+},
+"[json]": {
+"editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"[jsonc]": {
+"editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"[html]": {
+"editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"[javascript]": {
+"editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"[typescript]": {
+"editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"[markdown]": {
+"editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"javascript.updateImportsOnFileMove.enabled": "always",
+"typescript.updateImportsOnFileMove.enabled": "always",
+// comment
+//! comment
+//@ comment
+//$ comment
+"better-comments.tags": [
+{
+"tag": "",
+"color": "#FF0000",
+"strikethrough": false,
+"underline": false,
+"backgroundColor": "transparent",
+"bold": false,
+"italic": false
+},
+{
+"tag": "!",
+"color": "#FFA500",
+"strikethrough": false,
+"underline": false,
+"backgroundColor": "transparent",
+"bold": false,
+"italic": false
+},
+{
+"tag": "@",
+"color": "#00CED1",
+"strikethrough": false,
+"underline": false,
+"backgroundColor": "transparent",
+"bold": false,
+"italic": false
+},
+{
+"tag": "$",
+"color": "#FF00FF",
+"strikethrough": false,
+"underline": false,
+"backgroundColor": "transparent",
+"bold": false,
+"italic": false
+}
+],
+// pip install Pygments
+//
+// Tắt cửa sổ lỗi
+"latex-workshop.message.warning.show": false,
+"latex-workshop.message.error.show": false,
+// Xóa file
+"latex-workshop.latex.autoClean.run": "onSucceeded",
+// Hiện vị trí khi run
+"latex-workshop.synctex.afterBuild.enabled": true,
+// Vị trí file
+"latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+// Tự động run
+"latex-workshop.latex.autoBuild.run": "never",
+// "latex-workshop.latex.autoBuild.run": "onFileChange",
+}
+}
