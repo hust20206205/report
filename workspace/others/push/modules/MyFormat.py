@@ -2,7 +2,7 @@ import os
 import glob
 
 replacements = {
-    # '\n': '\n\n\n',
+    '\n': '\n\n\n',
     # '\\includegraphics[width': '\\includegraphics[scale=',
     # '\\includegraphics[ width': '\\includegraphics[scale=',
     # '\\includegraphics[height': '\\includegraphics[scale=',
