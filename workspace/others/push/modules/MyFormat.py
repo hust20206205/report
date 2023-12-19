@@ -5,9 +5,30 @@ replacements = {
     '\n': '\n\n\n',
     '\\includegraphics[width': '\\includegraphics[scale=',
     '\\includegraphics[ width': '\\includegraphics[scale=',
-    '\\includegraphics[height': '\\includegraphics[scale=', 
-    '\\includegraphics[ height': '\\includegraphics[scale=', 
+    '\\includegraphics[height': '\\includegraphics[scale=',
+    '\\includegraphics[ height': '\\includegraphics[scale=',
     '=': '=',
+    '+': '+',
+    '<!--': '%!',
+    '-->': '',
+    '-': '-',
+    '\\(': '$',
+    '\\)': '$',
+
+    'Monolithic': 'kiến trúc nguyên khối',
+    'monolithic': 'kiến trúc nguyên khối',
+
+    'Microservices': 'kiến trúc vi dịch vụ',
+    'microservices': 'kiến trúc vi dịch vụ',
+    'Microservice': 'kiến trúc vi dịch vụ',
+    'microservice': 'kiến trúc vi dịch vụ',
+    'dịch vụ vi mô': 'vi dịch vụ',
+
+
+    'ddd': 'thiết kế hướng miền',
+    'DDD': 'thiết kế hướng miền',
+
+    # "newpage":" newpage"
 }
 
 

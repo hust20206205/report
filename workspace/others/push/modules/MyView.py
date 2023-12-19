@@ -30,5 +30,5 @@ class MyView:
 
     def OpenLatex():
         MyView.Target(2)
-        pyautogui.hotkey('ctrl', 'alt', 'b')
+        # pyautogui.hotkey('ctrl', 'alt', 'b')
         pyautogui.hotkey('ctrl', 'alt', 'v')
