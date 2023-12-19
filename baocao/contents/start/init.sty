@@ -1,0 +1,38 @@
+\NeedsTeXFormat{LaTeX2e}
+
+\RequirePackage[utf8]{inputenc} % Tiếng Việt
+
+\RequirePackage[vietnamese]{babel} % Tiếng Việt
+
+\RequirePackage[left=3.5cm, right=2cm, top=3.5cm, bottom=3cm]{geometry} % Căn lề
+
+\RequirePackage{tikz} % Vẽ hình trang bìa
+
+\usetikzlibrary{calc} % Tính toán vẽ hình trang bìa
+
+\RequirePackage{graphicx} % Thêm hình ảnh
+
+\RequirePackage{pdfpages} % Thêm file pdf báo cáo tiến độ
+
+\RequirePackage{indentfirst} % Lùi dòng đoạn văn đầu tiên
+
+\RequirePackage{float} % Cố định hình ảnh [H]
+
+\RequirePackage{blindtext} % Tạo văn bản ngẫu nhiên
+
+\RequirePackage{fancyhdr} % Dùng đầu trang và chân trang của Fancy
+
+\fancypagestyle{plain}{
+
+\fancyhf{} % Xóa đầu trang và chân trang mặc định
+
+\fancyfoot[C]{\thepage} % Số trang ở giữa chân trang
+
+\renewcommand{\headrulewidth}{0pt} % Bỏ đường ngang đầu trang
+
+}
+
+\RequirePackage{hyperref} %
+
+\endinput
+
