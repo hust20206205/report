@@ -1,14 +1,6 @@
 import os
 import glob
-
-replacements = {
-    '\n': '\n\n\n',
-    '\\includegraphics[width': '\\includegraphics[scale=',
-    '\\includegraphics[ width': '\\includegraphics[scale=',
-    '\\includegraphics[height': '\\includegraphics[scale=', 
-    '\\includegraphics[ height': '\\includegraphics[scale=', 
-    '=': '=',
-}
+ 
 
 
 class MyFormat:
@@ -68,9 +60,9 @@ class MyFormat:
             if contents == '':
                 continue
 
-            for key, value in replacements.items():
-                value = f"  {value}  "
-                contents = contents.replace(key, value)
+            # for key, value in replacements.items():
+            #     value = f"  {value}  "
+            #     contents = contents.replace(key, value)
 
             while ' ,' in contents:
                 contents = contents.replace(' ,', ', ')
