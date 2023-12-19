@@ -20,6 +20,7 @@ MyFormat.basic(gitignore_path)
 MyFormat.basic(init_path)
 MyFormat.workspace(workspace_path)
 
+
 MyView.CloseTab()
 MyView.Target(2)
 MyView.CloseTerminal()
