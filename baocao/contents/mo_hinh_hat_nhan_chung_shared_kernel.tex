@@ -1,0 +1,83 @@
+Khi các liên hệ trong bối cảnh giới hạn có sự phụ thuộc lẫn nhau. Sự phụ thuộc này dẫn đến mức độ kết hợp cao. Vì vậy, các nhóm phát triển không thể hoạt động độc lập.
+
+Một cách để giải quyết vấn đề này là tạo ranh giới cho các mô hình hạt nhân chung, ranh giới này phải được phân định rõ ràng và chỉ những thay đổi đối với mô hình hạt nhân chung mới cần được các nhóm phối hợp.
+
+Từ đó, tách việc quản lí các mô hình hạt nhân chung này một cách độc lập với phần còn lại của bối cảnh giới hạn. Khi cần đưa ra quyết định thay đổi mà không phải của mô hình hạt nhân chung thì nhóm sẽ đưa ra quyết định hoạt động độc lập.
+
+Thông thường, mô hình hạt nhân chung được hiện thực hóa bằng các thư viện chung. Tuy nhiên, chỉ sử dụng mô hình hạt nhân chung nếu quan hệ của các liên hệ nhỏ nếu không thì sẽ tăng tính phụ thuộc làm phức tạp các dịch vụ.
+
+% %! $VD: hình giao như 2 tập hợp - - >
+
+% %! Shared Kernel : https:// thiết kế hướng miền - practitioners.com/shared - kernel - - >
+
+% %! Shared Kernel : https:// thiết kế hướng miền - practitioners.com/shared - kernel - - >
+
+Trang chủTrang chủBảng chú giảiBối cảnh giới hạn Mối quan hệ bối cảnh giới hạn Hạt nhân được chia sẻ
+
+Hạt nhân được chia sẻ
+
+Mối quan hệ hạt nhân chia sẻ là mối quan hệ bối cảnh giới hạn bao gồm hai hoặc nhiều bối cảnh giới hạn chia sẻ một cơ sở mã chung, chẳng hạn như thư viện hoặc CSDL . Mối quan hệ hạt nhân dùng chung ngụ ý rằng các thành phần dùng chung là một phần thiết yếu của miền lõi và do đó phải nhất quán trong tất cả các bối cảnh sử dụng chúng.
+
+Nói cách khác, mối quan hệ hạt nhân dùng chung là một cách cộng tác giữa nhiều nhóm hoặc nhiều bối cảnh trong khi vẫn đảm bảo rằng các thành phần miền cốt lõi luôn được đồng bộ hóa. Nó thường được sử dụng trong các tình huống có mức độ phụ thuộc lẫn nhau cao giữa nhiều bối cảnh hoặc khi phát triển một hệ thống mới từ đầu.
+
+Mối quan hệ kernel dùng chung có cả ưu điểm và nhược điểm, cần được xem xét cẩn thận trước khi áp dụng nó vào một dự án. Một số lợi ích của hạt nhân dùng chung bao gồm giảm thời gian phát triển, cải thiện tính nhất quán và mức độ cộng tác cao hơn. Tuy nhiên, nó cũng có thể dẫn đến sự liên kết chặt chẽ giữa các phần khác nhau của hệ thống, điều này có thể gây khó khăn cho việc duy trì và phát triển theo thời gian. Nó cũng có thể yêu cầu sự phối hợp đáng kể giữa các nhóm để đảm bảo rằng những thay đổi đối với kernel dùng chung được quản lý và truyền đạt đúng cách.
+
+Hàm ý
+
+Mối quan hệ hạt nhân được chia sẻ trong thiết kế hướng miền đề cập đến tình huống trong đó hai hoặc nhiều bối cảnh giới hạn chia sẻ một tập hợp con chung của mô hình miền và chúng đồng ý cộng tác để duy trì và phát triển phần được chia sẻ đó.
+
+Ưu điểm
+
+Tránh trùng lặp nỗ lực và giảm độ phức tạp bằng cách sử dụng lại một mô hình chung trên nhiều bối cảnh.
+
+Thúc đẩy tính nhất quán và ngôn ngữ chung giữa các nhóm và hệ thống khác nhau, giảm nguy cơ hiểu lầm và sai lệch.
+
+Tạo điều kiện thuận lợi cho việc tích hợp và tương tác giữa các hệ thống vì chúng có thể chia sẻ cùng một mô hình và cấu trúc dữ liệu.
+
+Nhược điểm
+
+Sự kết hợp chặt chẽ giữa các bối cảnh, vì những thay đổi trong mô hình dùng chung có thể có tác động lan tỏa trên các hệ thống khác nhau, khiến việc phát triển chúng một cách độc lập trở nên khó khăn hơn.
+
+Xung đột tiềm ẩn giữa các nhóm, vì những thay đổi đối với mô hình chia sẻ có thể yêu cầu sự phối hợp và đồng thuận, điều này có thể làm chậm quá trình phát triển và giảm tính tự chủ.
+
+Độ phức tạp và chi phí bảo trì, vì mô hình dùng chung có thể cần phải chung chung và linh hoạt hơn để phù hợp với nhiều bối cảnh, điều này có thể khiến khó hiểu và sửa đổi hơn.
+
+Do đó, mối quan hệ hạt nhân dùng chung nên được sử dụng cẩn thận và chỉ khi lợi ích lớn hơn những hạn chế và khi các nhóm liên quan có mức độ tin cậy và hợp tác cao.
+
+Ví dụ
+
+Hãy xem xét một ví dụ giả định về một nền tảng thương mại điện tử có hai bối cảnh giới hạn : “Đặt hàng” và “Quản lý hàng tồn kho”.
+
+Trong ngữ cảnh “Đặt hàng”, hệ thống xử lý việc tạo và quản lý đơn đặt hàng và trong ngữ cảnh “Quản lý hàng tồn kho”, hệ thống quản lý lượng hàng tồn kho có sẵn cho các sản phẩm. Vì cả hai bối cảnh đều xử lý thông tin sản phẩm nên việc thiết lập mối quan hệ hạt nhân chung giữa chúng có thể hợp lý.
+
+Với mối quan hệ hạt nhân được chia sẻ, hai nhóm chịu trách nhiệm về từng bối cảnh có thể thống nhất về một bộ mô hình dữ liệu và quy tắc kinh doanh chung liên quan đến sản phẩm, chẳng hạn như danh mục sản phẩm, giá cả và mức tồn kho. Cả hai nhóm sẽ có quyền truy cập vào kernel dùng chung này và chịu trách nhiệm duy trì nó.
+
+Cách tiếp cận này có thể có lợi vì nó cho phép các nhóm làm việc độc lập trong bối cảnh giới hạn của riêng họ đồng thời đảm bảo rằng họ đang sử dụng cùng các định nghĩa và quy tắc cho thông tin liên quan đến sản phẩm. Tuy nhiên, mối quan hệ này cũng có thể tạo ra sự liên kết chặt chẽ giữa hai bối cảnh, điều này có thể gây khó khăn cho việc thực hiện các thay đổi mà không ảnh hưởng đến cả hai bối cảnh.
+
+Ví dụ: nếu danh mục sản phẩm cần được cập nhật, cả hai nhóm sẽ cần tham gia vào quá trình thay đổi. Ngoài ra, nếu một nhóm thực hiện thay đổi đối với kernel dùng chung ảnh hưởng đến nhóm khác thì cần phải phối hợp và liên lạc để đảm bảo rằng thay đổi đó được tích hợp và kiểm tra đúng cách.
+
+Do đó, mối quan hệ hạt nhân dùng chung có thể hoạt động tốt khi hai bối cảnh có mức độ phụ thuộc lẫn nhau cao và cần có các mô hình dữ liệu dùng chung và quy tắc nghiệp vụ. Tuy nhiên, nó nên được sử dụng một cách thận trọng và chỉ khi cần thiết để tránh tạo ra sự liên kết không cần thiết giữa các bối cảnh.
+
+Khi nào nó hoạt động?
+
+Để mối quan hệ kernel dùng chung hoạt động hiệu quả, cần phải đáp ứng các điều kiện sau:
+
+Mã chia sẻ phải nhỏ và tập trung: Mã chia sẻ chỉ nên chứa các thành phần miền được chia sẻ thực sự giữa các ngữ cảnh được giới hạn. Nếu mã chia sẻ trở nên quá lớn hoặc phức tạp, nó có thể gây ra sự cố cho cả hai ngữ cảnh giới hạn .
+
+Mã chia sẻ phải ổn định: Mọi thay đổi được thực hiện đối với mã chia sẻ phải được thực hiện theo cách không ảnh hưởng đến các bối cảnh giới hạn khác. Điều này có nghĩa là mã chia sẻ phải được kiểm tra tốt và ổn định, đồng thời các thay đổi phải được thực hiện cẩn thận.
+
+Cần có mức độ tin cậy cao giữa các nhóm: Vì mã chung được nhiều nhóm sử dụng nên giữa họ cần có mức độ tin cậy và cộng tác cao. Mọi thay đổi được thực hiện đối với mã chia sẻ phải được thông báo rõ ràng cho tất cả các nhóm liên quan.
+
+Các nhóm cần hiểu rõ về lĩnh vực của nhau: Các nhóm tham gia vào mối quan hệ hạt nhân chung phải hiểu rõ về lĩnh vực của nhau. Điều này giúp đảm bảo rằng mã chia sẻ được sử dụng phù hợp và những thay đổi đối với mã chia sẻ được thực hiện theo cách nhất quán với kiến trúc tổng thể.
+
+Khi nào nó không hoạt động?
+
+Mối quan hệ hạt nhân được chia sẻ có thể gặp rủi ro vì nó kết hợp chặt chẽ hai bối cảnh giới hạn với nhau. Do đó, nếu một bối cảnh giới hạn thay đổi kernel dùng chung, nó có thể có tác động đáng kể đến bối cảnh giới hạn khác. Điều này gây khó khăn cho hai nhóm khi làm việc độc lập, có thể gây ra xích mích và làm chậm quá trình phát triển. Do đó, mối quan hệ hạt nhân dùng chung chỉ nên được sử dụng khi hai bối cảnh giới hạn có mối quan hệ chặt chẽ và cả hai nhóm đều làm việc chặt chẽ với nhau. Ngoài ra, điều quan trọng là phải có các thỏa thuận và quy trình rõ ràng để quản lý các thay đổi đối với hạt nhân dùng chung.
+
+% %! Shared Kernel : https:// thiết kế hướng miền - practitioners.com/shared - kernel - - >
+
+% %! Shared Kernel : https:// thiết kế hướng miền - practitioners.com/shared - kernel - - >
+
+% %! Shared Kernel : https:// thiết kế hướng miền - practitioners.com/shared - kernel - - >
+
+% %! Shared Kernel : https:// thiết kế hướng miền - practitioners.com/shared - kernel - - >
