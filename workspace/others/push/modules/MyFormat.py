@@ -3,6 +3,7 @@ import glob
 
 replacements = {
     '\n': '\n\n\n',
+    'cảnh giới hạn': 'cảnh bị giới hạn',
     # '\\includegraphics[width': '\\includegraphics[scale=',
     # '\\includegraphics[ width': '\\includegraphics[scale=',
     # '\\includegraphics[height': '\\includegraphics[scale=',
