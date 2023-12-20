@@ -6,6 +6,12 @@ Màu của số trang
 2 begin + end cho bảng, ảnh luôn căn giữa
  ảnh luôn dùng scale
  Thử dùng bảng để có dòng trang trắng
+
+
+ 
+% màu đỏ
+% số trang
+% đầu chương
 <!--@============================================== -->
 https://hoadondientu.gdt.gov.vn
 https://helpsme.misa.vn/2020/kb/quan-ly-hoa-don-dien-tu

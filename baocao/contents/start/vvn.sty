@@ -1,5 +1,9 @@
 \newcommand{\example}[1]{\textbf{Ví dụ:} #1} % Ví dụ
 
-% màu đỏ
-% số trang
-% đầu chương
+
+
+
+
+\usepackage{emptypage}
+
+\newcommand{\blankpage}{    \clearpage    \thispagestyle{empty}    \addtocounter{page}{-1}    \null    \vfill    \begin{center}        \textit{Trang này được bỏ trống có chủ đích.    }    \end{center}    \vfill    \clearpage    }    % Định nghĩa lệnh mới cho trang trắng
