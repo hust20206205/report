@@ -46,6 +46,20 @@
 
 \centering
 
+\includegraphics[scale = 0.5]{pictures/ban_do_boi_canh/main.drawio.png}
+
+\caption{vvn20206205}
+
+\end{figure}
+
+========================================
+
+========================================
+
+\begin{figure}[H]
+
+\centering
+
 \includegraphics[scale = 0.5]{pictures/boi_canh_gioi_han/main.png}
 
 \caption{vvn20206205}
