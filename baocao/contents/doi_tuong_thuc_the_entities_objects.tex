@@ -1,26 +1,181 @@
+% \subsection{Đối tượng thực thể (Entities Objects)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Đối tượng miền có thể là một thực thể, là đối tượng miền có nhận dạng duy nhất hoặc đối tượng giá trị, là đối tượng đại diện cho một đặc điểm của miền mà không có nhận dạng riêng.
+Định nghĩa:
+
+<!-- Một thực thể đại diện cho một đối tượng kinh doanh có thể nhận dạng duy nhất, bao gồm các thuộc tính và hành vi miền được xác định rõ ràng. -->
+
+mối quan hệ giữa logic nghiệp vụ và các đối tượng thực thể.
+
+<!-- Trong trường hợp bán lẻ, có các thực thể như đơn hàng, sản phẩm và hóa đơn. Lần tới tôi sẽ hướng dẫn chúng ta các đặc điểm của các thực thể giúp phân biệt chúng với các đối tượng kinh doanh khác. -->
+
+<!-- Một thực thể được xác định duy nhất trong một bối cảnh giới hạn. -->
+
+Các thực thể này và danh tính của chúng chỉ có ý nghĩa trong bối cảnh giới hạn tương ứng của chúng. Một thực thể có một tập hợp các thuộc tính được xác định bởi ngôn ngữ chung cho ngữ cảnh giới hạn .
+
+9
+
+00: 01: 31, 930--> 00: 01: 41, 130
+
+Ví dụ: thực thể tài khoản séc có thể có các thuộc tính như số tài khoản, số dư khách hàng và giao dịch.
+
+10
+
+00: 01: 41, 550--> 00: 01: 50, 430
+
+Một thực thể có một hành vi, nghĩa là nó đóng gói logic nghiệp vụ. Và logic kinh doanh này được thể hiện qua cách thức hoạt động.
+
+11
+
+00: 01: 50, 880--> 00: 02: 09, 180
+
+Khi các hoạt động này được thực hiện đối với thực thể, nó sẽ dẫn đến sự thay đổi trạng thái của thực thể. Ví dụ: trong trường hợp tài khoản séc, có nhiều thuộc tính và có nhiều thao tác, chẳng hạn như chuyển tiền ký quỹ.
+
+12
+
+00: 02: 09, 540--> 00: 02: 22, 720
+
+Khi một số thao tác này được thực thi, chúng sẽ thay đổi trạng thái của tài khoản. Ví dụ: số dư có thể tăng hoặc giảm do thực hiện một số thao tác này.
+
+13
+
+00: 02: 23, 100--> 00: 02: 29, 160
+
+Hãy xác định logic kinh doanh là gì, không phải kinh doanh. Logic đôi khi được gọi là logic miền.
+
+14
+
+00: 02: 29, 160--> 00: 02: 38, 680
+
+Logic nghiệp vụ có thể bao gồm các quy tắc nghiệp vụ. Ví dụ: việc rút tiền sẽ không thành công nếu số dư nhỏ hơn số tiền rút.
+
+15
+
+00: 02: 38, 850--> 00: 02: 55, 860
+
+Nó có thể là sự xác nhận. Ví dụ: số tiền rút không được nhỏ hơn hoặc bằng 0. Nó có thể là các phép tính, ví dụ, tính chéo thành phần cho tài khoản séc và nó có thể là các hoạt động có thể thay đổi trạng thái của thực thể.
+
+16
+
+00: 02: 55, 860--> 00: 03: 05, 880
+
+Ví dụ: logic giao dịch rút tiền có thể được kết hợp để thực hiện tất cả những điều này được gọi là logic nghiệp vụ nói chung.
+
+17
+
+00: 03: 06, 330--> 00: 03: 15, 600
+
+Hãy xem một ví dụ về logic nghiệp vụ hoặc hành vi. Trong trường hợp tài khoản séc, có thể có hoạt động rút tiền từ tài khoản.
+
+18
+
+00: 03: 15, 900--> 00: 03: 28, 320
+
+Hoạt động rút tiền này có thể lấy số tiền rút làm đối số. Việc kiểm tra đầu tiên sẽ được thực hiện khi thực hiện thao tác rút tiền là kiểm tra số dư khả dụng.
+
+19
+
+00: 03: 28, 320--> 00: 03: 39, 840
+
+Nếu số dư khả dụng nhỏ hơn số tiền rút thì giao dịch sẽ bị từ chối. Nếu không, giao dịch sẽ được chấp nhận và số dư sẽ bị giảm đi theo số tiền rút.
+
+20
+
+00: 03: 40, 140--> 00: 03: 49, 020
+
+Đã đến lúc làm một bài kiểm tra nhanh. Hãy nhìn vào thực thể tài khoản kiểm tra này. Chúng ta có nghĩ rằng thực thể này bộc lộ một số logic kinh doanh không?
+
+21
+
+00: 03: 50, 700--> 00: 03: 58, 350
+
+Câu trả lời là không, không phải vậy, và lý do tôi nói vậy là vì những thao tác này chỉ là getters và setters.
+
+22
+
+00: 03: 58, 350--> 00: 04: 08, 820
+
+Tương tự, thao tác này là sở hữu đối tượng vào CSDL . Vì vậy, nhìn từ bề ngoài, có vẻ như thực thể này không bao gồm bất kỳ hoạt động kinh doanh nào.
+
+23
+
+00: 04: 08, 820--> 00: 04: 21, 180
+
+Các thực thể logic chỉ có ý nghĩa trong bối cảnh ranh giới mà chúng được xác định. Người ta thường thấy các tên thực thể giống nhau xuất hiện trên nhiều ngữ cảnh được liên kết.
+
+24
+
+00: 04: 21, 630--> 00: 04: 29, 200
+
+Nhưng chúng ta phải nhớ rằng định nghĩa của thực thể trong bối cảnh giới hạn này không được đảm bảo giữ nguyên.
+
+25
+
+00: 04: 29, 310--> 00: 04: 39, 300
+
+Ví dụ: thực thể khách hàng trong tài khoản bán lẻ có thể trông không giống với thực thể khách hàng trong bối cảnh giới hạn thẻ tín dụng.
+
+26
+
+00: 04: 39, 660--> 00: 04: 53, 780
+
+Hãy nhớ rằng các thực thể được xác định duy nhất trong một ngữ cảnh giới hạn, nhưng đôi khi có thể xảy ra trường hợp cùng một thuộc tính được sử dụng để xác định duy nhất thực thể trong các liên hệ công việc.
+
+27
+
+00: 04: 53, 790--> 00: 05: 05, 620
+
+Nhưng đó hoàn toàn là sự trùng hợp ngẫu nhiên. Vì vậy, trong ví dụ này, số An sinh xã hội của khách hàng đang được sử dụng để nhận dạng duy nhất khách hàng trong cả hai địa chỉ liên hệ công việc này.
+
+28
+
+00: 05: 06, 180--> 00: 05: 26, 420
+
+Hãy nhớ rằng, đó thực sự là sự trùng hợp ngẫu nhiên. Việc xác định các thực thể này của nhóm sẽ hoạt động độc lập với nhau và xác định các thuộc tính cũng như hoạt động cho các thực thể dựa trên yêu cầu trong từng bối cảnh nghiệp vụ, các thực thể được lưu trữ lâu dài.
+
+29
+
+00: 05: 26, 700--> 00: 05: 40, 000
+
+Dữ liệu được lưu trữ dài hạn thể hiện trạng thái hiện tại của thực thể. Điều này phổ biến đối với RDBMS và không có CSDL đơn lẻ nào được sử dụng để lưu trữ liên tục các thực thể.
+
+30
+
+00: 05: 40, 620--> 00: 05: 56, 450
+
+Trong trường hợp RDBMS, một bảng biểu thị một tập hợp các thực thể. Các quy tắc trong bảng biểu thị các thực thể được xác định duy nhất bằng cột khóa chính.
+
+31
+
+00: 05: 56, 700--> 00: 06: 06, 740
+
+Các cột còn lại có các giá trị cho thuộc tính của từng thực thể. Đã đến lúc xem lại nhanh những điểm chính của bài giảng này.
+
+32
+
+00: 06: 06, 840--> 00: 06: 14, 640
+
+Điều đầu tiên là các thực thể là các đối tượng kinh doanh chỉ có ý nghĩa trong một bối cảnh giới hạn.
+
+33
+
+00: 06: 14, 640--> 00: 06: 26, 760
+
+Nơi chúng được xác định là các thực thể được xác định duy nhất trong bối cảnh giới hạn . Tiếp theo là định nghĩa của thực thể bao gồm thuộc tính và hành vi.
+
+34
+
+00: 06: 27, 060--> 00: 06: 35, 700
+
+Hành vi này triển khai logic nghiệp vụ có thể thay đổi trạng thái của thực thể. Các thực thể được lưu trữ lâu dài.
 
 
-% Đối tượng thực thể có bản sắc riêng nhưng không thể
 
-% tồn tại nếu không có tập hợp gốc, nghĩa là chúng
 
-% được tạo khi tập hợp gốc được tạo và bị hủy khi tập
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% hợp gốc bị phá hủy.
+Đối tượng thực thể (Entities Objects)  là đối tượng miền có có định danh riêng  duy nhất.  Định danh này được giữ nguyên xuyên suốt trạng thái hoạt động của hệ thống phần mềm.
 
-% Đối tượng thực thể = Mã định danh phụ của Bối cảnh giới hạn của chúng ta
-
-%! % Entity Object -
-
-****
-
-% ****
-
-Trong các đối tượng của một phần mềm, có một nhóm các đối tượng có định danh riêng.
-
-Định danh này được giữ nguyên xuyên suốt trạng thái hoạt động của phần mềm. Hệ thống phân biệt hai đối tượng với hai định danh khác nhau, hay hai đối tượng chung định danh có thể coi là một.
 
 Các thực thể là những đối tượng rất quan trọng của mô hình miền. Việc xác định xem một đối tượng có phải là thực thể hay không rất quan trọng.
 

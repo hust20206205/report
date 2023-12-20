@@ -1,0 +1,136 @@
+% %! Service : https:// thiết kế hướng miền - practitioners.com/ dịch vụ
+
+% %! Service : https:// thiết kế hướng miền - practitioners.com/ dịch vụ
+
+% %! Service : https:// thiết kế hướng miền - practitioners.com/ dịch vụ
+
+% %! Service : https:// thiết kế hướng miền - practitioners.com/ dịch vụ
+
+% %! Service : https:// thiết kế hướng miền - practitioners.com/ dịch vụ
+
+% %! [[Service]] An operation offered as an interface that stands alone in the model, with no encapsulated state.
+
+Chuyển đến nội dung
+
+Đối với người hành nghề bởi người hành nghề
+
+Tìm kiếm
+
+Thiết kế hướng miền: Hướng dẫn dành cho người thực hành
+
+Câu hỏi thường gặp
+
+Bảng chú giải
+
+Về chúng tôi
+
+Cuốn sách của chúng tôi!
+
+Trang chủTrang chủBảng chú giảiDịch vụ
+
+Dịch vụ
+
+Trong thiết kế hướng miền, dịch vụ là một phần của lớp miền triển khai logic miền hoặc trường hợp sử dụng không phù hợp một cách tự nhiên với một thực thể hoặc đối tượng giá trị cụ thể. Nó thường điều phối các tương tác giữa nhiều thực thể hoặc tập hợp. Một dịch vụ đại diện cho một hoạt động gắn kết và không trạng thái có đầu vào và đầu ra. Nó không có trạng thái bền vững và không cần phải khởi tạo. Các dịch vụ thường có tên phản ánh mục đích miền của chúng, chẳng hạn như `OrderProcessingService` hoặc `PaymentService`.
+
+Có một số trường hợp nhất định mà việc sử dụng dịch vụ có thể không phù hợp.
+
+Thứ nhất, nếu logic nghiệp vụ có thể được liên kết với một thực thể hoặc đối tượng giá trị, có thể tốt hơn nếu gói gọn logic trong thực thể hoặc đối tượng giá trị đó. Điều này có thể giúp cải thiện tính gắn kết của mã và làm cho mã dễ hiểu hơn.
+
+Thứ hai, nếu logic nghiệp vụ liên quan đến nhiều thực thể hoặc tập hợp được liên kết chặt chẽ với nhau thì tốt hơn là chúng ta nên đánh giá lại thiết kế của bản thân các uẩn. Trong những trường hợp như vậy, có thể phù hợp hơn nếu phân chia các tập hợp hoặc xác định lại ranh giới của chúng để giảm sự ghép nối và cải thiện khả năng bảo trì.
+
+Cuối cùng, nếu logic nghiệp vụ liên quan đến các hệ thống hoặc cơ sở hạ tầng bên ngoài thì tốt hơn nên sử dụng lớp chống đổ vỡ hoặc mẫu bộ chuyển đổi để tách biệt mô hình miền khỏi các phụ thuộc bên ngoài. Điều này có thể giúp giảm khả năng ghép nối và cải thiện tính linh hoạt của hệ thống.
+
+Ví dụ
+
+Dưới đây là ví dụ về một dịch vụ trong Java có liên quan đến nhiều hơn một tổng hợp:
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+số 8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+public class OrderService {
+
+private final OrderRepository orderRepository;
+
+private final ProductRepository productRepository;
+
+public void createOrder(Order order) {
+
+for (OrderItem item: order.getItems()) {
+
+Product product = productRepository.findById(item.getProductId());
+
+product.reduceStockBy(item.getQuantity());
+
+productRepository.save(product);
+
+}
+
+orderRepository.save(order);
+
+}
+
+// Other methods...
+
+}
+
+Trong ví dụ này, OrderService chịu trách nhiệm tạo đơn đặt hàng và nó tương tác với hai tập hợp: Order và Product. Tổng hợp Order đại diện cho đơn đặt hàng do khách hàng đặt, trong khi tổng hợp Product đại diện cho một sản phẩm có thể được đặt hàng.
+
+Phương thức createOrder cập nhật kho của từng sản phẩm trong đơn hàng bằng cách gọi phương thức save trên ProductRepository, và sau đó tự lưu đơn hàng bằng cách gọi phương thức save trên OrderRepository.
+
+Thể loại
+
+Phân tích
+
+điều cơ bản
+
+thiết kế hướng miền
+
+thiết kế
+
+câu hỏi thường gặp
+
+Khả năng lãnh đạo
+
+hoa văn
+
+Blog tại WordPress.com.
+
+% %! Service : https:// thiết kế hướng miền - practitioners.com/ dịch vụ
+
+% %! Service : https:// thiết kế hướng miền - practitioners.com/ dịch vụ
+
+% %! Service : https:// thiết kế hướng miền - practitioners.com/ dịch vụ
+
+% %! Service : https:// thiết kế hướng miền - practitioners.com/ dịch vụ
+
+% %! Service : https:// thiết kế hướng miền - practitioners.com/ dịch vụ
+
+% %! Service : https:// thiết kế hướng miền - practitioners.com/ dịch vụ
+

@@ -1,0 +1,134 @@
+% Một đối tượng được dùng để mô tả các khía cạnh cố định của một miền và không có định danh.
+
+% Đối tượng giá trị không có danh tính duy nhất.
+
+% Đối tượng giá trị được tạo trong bộ nhớ tiến trình và sau đó bị hủy sau khi nó đã phục vụ mục đích của nó.
+
+% Một điểm khác biệt quan trọng giữa các thực thể và đối tượng giá trị là đối tượng giá trị không tồn tại lâu dài trong CSDL.
+
+% %! VD
+
+% %! chúng ta sẽ đặt logic xác thực cho địa chỉ email ở đâu?
+
+% %! xác nhận kỹ thuật không liên quan đến bất kỳ khái niệm kinh doanh nào.
+
+% %! tạo một đối tượng giá trị để xác thực địa chỉ email.
+
+% %! Kết quả là, thực thể khách hàng sẽ sạch hơn và đơn giản hơn nhiều trong việc thực hiện.
+
+% %! % Value Object -
+
+% %! Value Object : https:// thiết kế hướng miền - practitioners.com/home/glossary/value - object
+
+% %! Value Object : https:// thiết kế hướng miền - practitioners.com/home/glossary/value - object
+
+% %! Value Object : https:// thiết kế hướng miền - practitioners.com/home/glossary/value - object
+
+% %! [[Value Object]] An object that describes some characteristic or attribute but carries no concept of identity.
+
+Trang chủTrang chủBảng chú giảiĐối tượng giá trị
+
+Đối tượng giá trị
+
+Trong Thiết kế hướng miền (thiết kế hướng miền), đối tượng giá trị là một đối tượng đại diện cho một khái niệm hoặc ý tưởng trong mô hình miền không có danh tính duy nhất hoặc tuổi thọ vượt quá tuổi thọ của thực thể chứa đối tượng.
+
+Một đối tượng giá trị được xác định bởi các thuộc tính của nó và nó không thể thay đổi, nghĩa là trạng thái của nó không thể thay đổi sau khi được tạo. Các đối tượng giá trị thường được sử dụng để biểu thị số lượng, phép đo, ngày tháng, tiền tệ hoặc các khái niệm khác có thể được biểu thị dưới dạng kết hợp các thuộc tính.
+
+Vì các đối tượng giá trị không có danh tính duy nhất nên chúng có thể được sao chép và chia sẻ tự do mà không ảnh hưởng đến tính nhất quán của mô hình miền. Các đối tượng giá trị cũng được so sánh dựa trên thuộc tính của chúng chứ không phải danh tính của chúng, điều này cho phép so sánh linh hoạt và trực quan hơn.
+
+Trong triển khai phần mềm, các đối tượng giá trị thường được tạo dưới dạng các lớp bất biến, không có danh tính riêng và chúng thường được triển khai như một phần của thực thể hoặc tập hợp chứa. Bằng cách sử dụng các đối tượng giá trị trong mô hình miền, nhà phát triển có thể tạo mã có tính biểu cảm hơn, dễ bảo trì và mở rộng hơn để phản ánh tốt hơn miền kinh doanh.
+
+Một ví dụ
+
+Giả sử chúng ta đang xây dựng một trang web thương mại điện tử và chúng ta có yêu cầu thể hiện giá trong mô hình miền. Giá là một ứng cử viên phù hợp cho đối tượng giá trị vì nó có thể được biểu diễn dưới dạng kết hợp các thuộc tính (ví dụ: tiền tệ và số lượng) và không có đặc điểm nhận dạng duy nhất của riêng nó.
+
+Đây là một ví dụ cực kỳ đơn giản về đối tượng Giá trị giá trong Java:
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+số 8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+16
+
+17
+
+18
+
+19
+
+class Price {
+
+private final Currency currency;
+
+private final BigDecimal amount;
+
+public Price(Currency currency, BigDecimal amount) {
+
+this.currency = currency;
+
+this.amount = amount;
+
+}
+
+public Currency getCurrency() {
+
+return currency;
+
+}
+
+public BigDecimal getAmount() {
+
+return amount;
+
+}
+
+// Other methods and business logic specific to the Price concept
+
+}
+
+Trong ví dụ này, đối tượng giá trị Price có hai thuộc tính: currency và amount. Thuộc tính currency đại diện cho đơn vị tiền tệ của giá (ví dụ: USD, EUR, v.v.), trong khi thuộc tính amount đại diện cho giá trị bằng số của giá. Đối tượng Price là bất biến và trạng thái của nó không thể thay đổi sau khi được tạo. Đối tượng Price cũng xác định các phương thức để truy xuất các thuộc tính của nó (ví dụ: getCurrency() và getAmount()), cũng như các phương thức khác dành riêng cho < khái niệm /span>). hoặc Price (ví dụ: phương thức add()subtract()
+
+Bằng cách sử dụng đối tượng giá trị Price, chúng tôi có thể đảm bảo rằng giá được thể hiện nhất quán trong toàn bộ mô hình miền và chúng tôi có thể thực hiện các so sánh và tính toán linh hoạt và trực quan hơn về giá.
+
+Đối tượng giá trị so với thực thể
+
+Đối tượng giá trị trong một giải pháp có thể trở thành một thực thể trong giải pháp khác. Sự khác biệt giữa các đối tượng giá trị và các thực thể phụ thuộc vào ngữ cảnh và dựa trên nhu cầu của mô hình miền.
+
+Trong một ngữ cảnh, một đối tượng có thể được coi là một đối tượng giá trị vì nó được xác định bởi các thuộc tính của nó và không có một danh tính duy nhất. Tuy nhiên, trong một bối cảnh khác hoặc một giải pháp khác, cùng một đối tượng có thể được coi là một thực thể vì nó có một danh tính duy nhất và có thể được lưu giữ trong CSDL hoặc có tuổi thọ vượt quá đối tượng chứa.
+
+Ví dụ: hãy xem xét một đối tượng Person trong miền nhân sự. Trong một ngữ cảnh, đối tượng Person có thể được coi là một đối tượng giá trị vì nó được xác định bởi các thuộc tính của nó, chẳng hạn như tên, ngày sinh và số an sinh xã hội. Tuy nhiên, trong một ngữ cảnh khác hoặc một giải pháp khác, đối tượng Person có thể được coi là một thực thể vì nó có một danh tính duy nhất và có thể được duy trì trong CSDL hoặc được sử dụng trên các ngữ cảnh giới hạn khác nhau.
+
+Cuối cùng, việc lựa chọn mô hình hóa một đối tượng là đối tượng giá trị hay thực thể phụ thuộc vào nhu cầu của mô hình miền và các yêu cầu cụ thể của giải pháp phần mềm đang được phát triển. Điều quan trọng là chọn các khái niệm mô hình phù hợp để thể hiện chính xác miền và cung cấp giải pháp phần mềm linh hoạt và có thể bảo trì.
+
+% %! Value Object : https:// thiết kế hướng miền - practitioners.com/home/glossary/value - object
+
+% %! Value Object : https:// thiết kế hướng miền - practitioners.com/home/glossary/value - object
+
+% %! Value Object : https:// thiết kế hướng miền - practitioners.com/home/glossary/value - object
+
