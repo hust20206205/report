@@ -3,15 +3,16 @@
 <!--@ Latex -->
 <!-- C:/Users/vvn20206205/Documents/UdemyMasterAcademicTypesettingwithLaTeX202111_VVN\000000005\000000004_vn2_nghia.mp4 -->
 
-<!-- Tiêu đề chương các mục có tiếng anh -->
-
 <!-- Cần thêm nhiều ví dụ -->
-
 <!-- Màu đỏ của số trang, đầu chương -->
-
-<!-- 2 begin + end cho bảng, ảnh luôn căn giữa -->
-
+<!-- Tiêu đề chương các mục có tiếng anh -->
+<!-- ảnh,  bảng luôn căn giữa -->
+<!-- ảnh,  bảng luôn  có 2 begin + end -->
 <!-- ảnh luôn dùng [scale] -->
+<!-- ảnh luôn có folder/main -->
+
+
+
 <!-- \newpage phải ở bên ngoài main -->
 
 
