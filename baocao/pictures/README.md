@@ -1,10 +1,17 @@
-<!-- % Nguồn: TCT: https://hoadondientu.gdt.gov.vn -->
-
-<!-- % https://helpsme.misa.vn/2020/kb/quan - ly - hoa - don - dien - tu -->
-
-<!-- https://ddd-practitioners.com/home/glossary -->
-
-<!-- % https: //www.infoq.com/minibooks/domain - driven - design - quickly -->
+<!--@============================================== -->
+<!--@ Latex -->
+Tiêu đề có tiếng anh
+Cần thêm nhiều ví dụ
+Màu của số trang
+2 begin + end cho bảng, ảnh luôn căn giữa
+ ảnh luôn dùng scale
+ Thử dùng bảng để có dòng trang trắng
+<!--@============================================== -->
+https://hoadondientu.gdt.gov.vn
+https://helpsme.misa.vn/2020/kb/quan-ly-hoa-don-dien-tu
+https://ddd-practitioners.com/home/glossary
+https://www.infoq.com/minibooks/domain-driven-design-quickly
+<!--@============================================== -->
 
 Hãy giúp tôi sửa lỗi chính tả và ngữ pháp:
 
