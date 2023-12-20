@@ -1,0 +1,172 @@
+
+% Đối tượng miền có thể là một thực thể, là đối tượng miền có nhận dạng duy nhất hoặc đối tượng giá trị, là đối tượng đại diện cho một đặc điểm của miền mà không có nhận dạng riêng.
+
+
+% Đối tượng thực thể có bản sắc riêng nhưng không thể
+
+% tồn tại nếu không có tập hợp gốc, nghĩa là chúng
+
+% được tạo khi tập hợp gốc được tạo và bị hủy khi tập
+
+% hợp gốc bị phá hủy.
+
+% Đối tượng thực thể = Mã định danh phụ của Bối cảnh giới hạn của chúng ta
+
+%! % Entity Object -
+
+****
+
+% ****
+
+Trong các đối tượng của một phần mềm, có một nhóm các đối tượng có định danh riêng.
+
+Định danh này được giữ nguyên xuyên suốt trạng thái hoạt động của phần mềm. Hệ thống phân biệt hai đối tượng với hai định danh khác nhau, hay hai đối tượng chung định danh có thể coi là một.
+
+Các thực thể là những đối tượng rất quan trọng của mô hình miền. Việc xác định xem một đối tượng có phải là thực thể hay không rất quan trọng.
+
+Trong trường hợp CSDL quan hệ, một bảng biểu thị một tập hợp các thực thể. Các quy tắc trong bảng biểu thị các thực thể được xác định duy nhất bằng cột khóa chính.
+
+Hành vi này triển khai logic nghiệp vụ có thể thay đổi trạng thái của thực thể. Các thực thể được lưu trữ lâu dài.
+
+% %! Entity : https:// thiết kế hướng miền - practitioners.com/entity
+
+% %! Entity : https:// thiết kế hướng miền - practitioners.com/entity
+
+% %! Entity : https:// thiết kế hướng miền - practitioners.com/entity
+
+% %! Entity : https:// thiết kế hướng miền - practitioners.com/entity
+
+
+thực thể
+
+Trong Thiết kế hướng miền (thiết kế hướng miền), thực thể là khái niệm cốt lõi đại diện cho một đối tượng miền có nhận dạng duy nhất. Thực thể là một đối tượng được phân biệt với các đối tượng khác dựa trên nhận dạng duy nhất của nó, thay vì thuộc tính hoặc giá trị của nó.
+
+Các thực thể thường là các đối tượng quan trọng nhất trong mô hình miền và chúng thường có logic và hành vi nghiệp vụ phức tạp được liên kết với chúng. Họ cũng có thể có mối quan hệ với các thực thể, đối tượng giá trị hoặc dịch vụ miền khác.
+
+Một thực thể có các đặc điểm sau:
+
+Danh tính: Một thực thể có một danh tính duy nhất để phân biệt nó với các thực thể khác trong mô hình miền. Danh tính thường được biểu thị bằng ID hoặc khóa, chẳng hạn như ID khách hàng hoặc SKU sản phẩm.
+
+Khả năng thay đổi: Các thuộc tính của thực thể có thể thay đổi theo thời gian trong khi vẫn duy trì được danh tính của nó. Ví dụ: tên hoặc địa chỉ của khách hàng có thể thay đổi nhưng ID khách hàng vẫn giữ nguyên.
+
+Hành vi: Một thực thể có hành vi liên quan đến nó, thường là các quy tắc và logic nghiệp vụ phức tạp. Hành vi này thường được gói gọn trong chính thực thể đó.
+
+Mối quan hệ: Một thực thể có thể có mối quan hệ với các thực thể, đối tượng giá trị hoặc dịch vụ miền khác. Ví dụ: khách hàng có thể có lịch sử đặt hàng hoặc giỏ hàng.
+
+Các thực thể là một phần thiết yếu của mô hình miền và phải được thiết kế để thể hiện chính xác miền và các quy tắc kinh doanh của nó. Bằng cách lập mô hình chính xác các thực thể, nhà phát triển có thể tạo ra giải pháp phần mềm linh hoạt và dễ bảo trì hơn, đáp ứng nhu cầu của miền.
+
+Một ví dụ
+
+Hãy xem xét một nền tảng thương mại điện tử nơi khách hàng có thể đặt hàng sản phẩm. Trong mô hình miền này, Đơn hàng là một thực thể. Mỗi đơn hàng có một danh tính duy nhất và bất biến, chẳng hạn như số đơn hàng, giúp phân biệt nó với các đơn hàng khác trong hệ thống.
+
+Thực thể Đơn hàng có thể có một số thuộc tính, chẳng hạn như thông tin khách hàng, chi tiết thanh toán và thông tin giao hàng. Nó cũng có thể có mối quan hệ với các thực thể khác, chẳng hạn như thực thể Sản phẩm và Khách hàng.
+
+Hành vi của thực thể Đơn hàng bao gồm tạo và cập nhật đơn hàng, quản lý xử lý thanh toán và theo dõi trạng thái đơn hàng.
+
+Dưới đây là ví dụ về giao diện của thực thể Đơn hàng trong mã:
+
+public class Order {
+
+private OrderId orderId;
+
+private Customer customer;
+
+private List<Product> products;
+
+private Date orderDate;
+
+private PaymentDetails paymentDetails;
+
+private ShippingDetails shippingDetails;
+
+public Order(OrderId orderId, Customer customer) {
+
+this.orderId = orderId;
+
+this.customer = customer;
+
+this.products = Lists.newArrayList();
+
+this.orderDate = LocalDate.now();
+
+}
+
+public void addProduct(Product product) {
+
+products.add(product);
+
+}
+
+public void removeProduct(Product product) {
+
+products.remove(product);
+
+}
+
+public void processPayment() {
+
+// Process payment logic here...
+
+}
+
+public void shipOrder() {
+
+// Shipping logic here...
+
+}
+
+// Other behavior methods here...
+
+}
+
+Trong ví dụ này, thực thể Đơn hàng có một ID duy nhất (orderId) xác định nó trong hệ thống, cùng với các thuộc tính khác như customer, < /span>, gói gọn logic kinh doanh được liên kết với thực thể đơn hàng., và,, . Thực thể cũng có các phương thức hành vi, chẳng hạn như và, products, orderDatepaymentDetailsshippingDetailsaddProductremoveProductprocessPaymentshipOrder
+
+% %! Entity : https:// thiết kế hướng miền - practitioners.com/entity
+
+% %! Entity : https:// thiết kế hướng miền - practitioners.com/entity
+
+% %! Entity : https:// thiết kế hướng miền - practitioners.com/entity
+
+
+% %! Entity Identity : https:// thiết kế hướng miền - practitioners.com/entity - identity
+
+% %! Entity Identity : https:// thiết kế hướng miền - practitioners.com/entity - identity
+
+% %! Entity Identity : https:// thiết kế hướng miền - practitioners.com/entity - identity
+
+% %! Entity Identity : https:// thiết kế hướng miền - practitioners.com/entity - identity
+
+Trang chủTrang chủBảng chú giảiNhận dạng thực thể
+
+Nhận dạng thực thể
+
+Danh tính của một thực thể phải là duy nhất và bất biến, nghĩa là nó không được thay đổi trong suốt vòng đời của thực thể đó. Việc thay đổi danh tính của một thực thể có thể gây ra hậu quả nghiêm trọng, chẳng hạn như gây ra sự không nhất quán về dữ liệu hoặc phá vỡ mối quan hệ với các thực thể hoặc đối tượng giá trị khác. Ví dụ: nếu ID của khách hàng bị thay đổi, điều đó có thể dẫn đến nhầm lẫn khi theo dõi lịch sử mua hàng của họ hoặc các tương tác khác với hệ thống.
+
+Điều quan trọng cần lưu ý là các thuộc tính của thực thể, chẳng hạn như tên hoặc địa chỉ, có thể thay đổi mà không ảnh hưởng đến danh tính của thực thể đó. Những thay đổi này phải được quản lý thông qua việc đóng gói thích hợp hành vi và logic kinh doanh của thực thể.
+
+Tóm lại, danh tính của một thực thể phải là duy nhất và bất biến, đồng thời những thay đổi đối với các thuộc tính của thực thể sẽ không ảnh hưởng đến danh tính của thực thể đó. Bằng cách tuân thủ nguyên tắc này, các nhà phát triển có thể tạo ra một mô hình miền nhất quán và dễ bảo trì hơn, thể hiện chính xác miền kinh doanh.
+
+Làm thế nào để chọn một danh tính thực thể tốt
+
+Chọn danh tính phù hợp cho một thực thể là một phần quan trọng trong việc thiết kế mô hình miền trong Thiết kế hướng miền (thiết kế hướng miền). Dưới đây là một số phương pháp hay để chọn danh tính của một thực thể:
+
+Chọn một danh tính duy nhất: Danh tính của một thực thể phải là duy nhất trong mô hình miền và nó không được thay đổi trong suốt vòng đời của thực thể. Danh tính của một thực thể phải được xác định theo yêu cầu kinh doanh, chẳng hạn như mã định danh duy nhất như số sê - ri, ID khách hàng hoặc số an sinh xã hội.
+
+Chọn danh tính ổn định: Danh tính của thực thể phải ổn định, nghĩa là danh tính không được thay đổi theo thời gian. Danh tính ổn định cho phép tính nhất quán và độ chính xác trong mô hình miền và nó có thể ngăn ngừa lỗi trong hệ thống. Ví dụ: nếu ID của khách hàng thay đổi, việc theo dõi lịch sử mua hàng của họ hoặc các tương tác khác với hệ thống có thể gây nhầm lẫn.
+
+Chọn danh tính dễ nhận dạng: Danh tính của thực thể phải dễ nhận dạng, tốt nhất là bởi người đọc. Ví dụ: việc sử dụng UUID hoặc GUID có thể không dễ nhận biết như tên hoặc số ID của khách hàng.
+
+Chọn một danh tính có thể được sử dụng nhất quán trong toàn bộ mô hình miền: Danh tính của một thực thể phải nhất quán trong toàn bộ mô hình miền và nó phải được sử dụng nhất quán trong mọi ngữ cảnh mà thực thể đó được tham chiếu.
+
+Xem xét khả năng mở rộng và hiệu suất: Việc chọn một danh tính có thể mở rộng quy mô và hoạt động tốt cũng rất quan trọng, đặc biệt đối với các hệ thống có khối lượng dữ liệu lớn hoặc thông lượng cao.
+
+Bằng cách làm theo những thực tiễn này, nhà phát triển có thể chọn danh tính phù hợp cho các thực thể thể hiện chính xác mô hình miền và cung cấp giải pháp phần mềm linh hoạt và có thể bảo trì.
+
+% %! Entity Identity : https:// thiết kế hướng miền - practitioners.com/entity - identity
+
+% %! Entity Identity : https:// thiết kế hướng miền - practitioners.com/entity - identity
+
+% %! Entity Identity : https:// thiết kế hướng miền - practitioners.com/entity - identity
+
+% %! Entity Identity : https:// thiết kế hướng miền - practitioners.com/entity - identity
+
