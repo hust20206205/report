@@ -130,6 +130,20 @@
 
 \centering
 
+\includegraphics[scale = 0.5]{pictures/cac_moi_quan_he_boi_canh_gioi_han/main.png}
+
+\caption{vvn20206205}
+
+\end{figure}
+
+========================================
+
+========================================
+
+\begin{figure}[H]
+
+\centering
+
 \includegraphics[scale = 0.5]{pictures/da_ngon_ngu_va_csdl/main.drawio.png}
 
 \caption{vvn20206205}
@@ -299,6 +313,20 @@
 \centering
 
 \includegraphics[scale = 0.5]{pictures/kien_truc_vi_dich_vu_cua_amazon/main.png}
+
+\caption{vvn20206205}
+
+\end{figure}
+
+========================================
+
+========================================
+
+\begin{figure}[H]
+
+\centering
+
+\includegraphics[scale = 0.5]{pictures/mo_hinh_hat_nhan_chung_shared_kernel/main.drawio.png}
 
 \caption{vvn20206205}
 

@@ -11,7 +11,9 @@ Hãy giúp tôi sửa lỗi chính tả và ngữ pháp:
 Tóm tắt nội dung theo 10 gạch đầu dòng:
 
 \emph{ChuDuocDanhDau}
+
 ![Alt text](cac_moi_quan_he_boi_canh_gioi_han/main.png)
+
 <!--@============================================== -->
 
 <!--@============================================== -->
