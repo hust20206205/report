@@ -14,7 +14,7 @@ MyGit.chdir(git_path)
 MyGit.add()
 MyGit.commit(message)
 
-# MyFormat.latex(git_path)
+MyFormat.latex(git_path)
 MyFormat.markdown(git_path)
 MyFormat.basic(gitignore_path)
 MyFormat.basic(init_path)
