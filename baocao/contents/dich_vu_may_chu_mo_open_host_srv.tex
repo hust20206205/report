@@ -1,104 +1,38 @@
-Bối cảnh ranh giới cung cấp các dịch vụ chung được gọi là dịch vụ nguồn mở
+%  Dịch vụ máy chủ mở (Open Host Service) 
+Dịch vụ máy chủ mở (Open Host Service)  là  nhà cung cấp  trong mô hình khách hàng - nhà cung cấp,   dịch vụ máy chủ mở   hiển thị một API công khai cho  các     bối cảnh giới hạn  khác     sử dụng  chức năng của   nhà cung cấp.
 
-mô tả dịch vụ chung này dưới dạng mẫu được đặt trước bối cảnh giới hạn ngược dòng cung cấp các dịch vụ chung, bối cảnh giới hạn ngược dòng hoặc nhà cung cấp dịch vụ được lưu trữ mở trong mối quan hệ này cung cấp một ngôn ngữ chung để tích hợp.
+Trong bản đồ    bối cảnh,      dịch vụ máy chủ mở    được ký hiệu là   OHS.
 
-Đối tác đầu tiên, mẫu dịch vụ được lưu trữ mở, trong đó bối cảnh kết hợp ngược dòng cung cấp một tập hợp các dịch vụ chung hoặc khả năng chung cho bối cảnh giới hạn xuôi dòng.
 
-%! D - OHS
 
-Bối cảnh ranh giới ngược dòng cung cấp các dịch vụ chung được gọi là dịch vụ nguồn mở
 
-và mẫu này được gọi là mẫu dịch vụ nguồn mở để
-
-mô tả dịch vụ chung này dưới dạng mẫu được đặt trước bối cảnh giới hạn ngược dòng cung cấp các dịch vụ chung
-
-% %! Open - Host Service : https:// thiết kế hướng miền - practitioners.com/open - host - dịch vụ
-
-% %! Open - Host Service : https:// thiết kế hướng miền - practitioners.com/open - host - dịch vụ
-
-% %! Open - Host Service : https:// thiết kế hướng miền - practitioners.com/open - host - dịch vụ
-
-% %! Open - Host Service : https:// thiết kế hướng miền - practitioners.com/open - host - dịch vụ
-
-Dịch vụ máy chủ mở
-
-Mối quan hệ dịch vụ máy chủ mở là một loại mối quan hệ giữa các bối cảnh giới hạn liên quan đến một bối cảnh giới hạn cung cấp dịch vụ mà một bối cảnh giới hạn khác có thể truy cập. Trong mối quan hệ này, một bối cảnh giới hạn được coi là “máy chủ” và bối cảnh giới hạn khác được coi là “khách hàng” hoặc “người tiêu dùng” của dịch vụ. Máy chủ cung cấp giao diện hoặc API để máy khách sử dụng và máy khách chịu trách nhiệm triển khai mã cần thiết để tương tác với máy chủ và sử dụng dịch vụ.
-
-Mối quan hệ này thường được sử dụng khi một bối cảnh giới hạn có chuyên môn hoặc khả năng cụ thể hữu ích cho các bối cảnh giới hạn khác trong hệ thống. Bằng cách cung cấp dịch vụ máy chủ mở, bối cảnh giới hạn có chuyên môn có thể chia sẻ khả năng của nó với các bối cảnh giới hạn khác theo cách được kiểm soát và tiêu chuẩn hóa.
-
-Mối quan hệ dịch vụ máy chủ mở có thể giúp giảm sự trùng lặp chức năng trên các bối cảnh giới hạn và thúc đẩy tính mô đun hóa cũng như khả năng sử dụng lại. Tuy nhiên, nó cũng đưa ra một số sự kết nối giữa các ngữ cảnh giới hạn, vì những thay đổi đối với dịch vụ do máy chủ cung cấp có thể yêu cầu những thay đổi đối với các máy khách phụ thuộc vào nó. Như với tất cả các mối quan hệ giữa các bối cảnh giới hạn, sự cân bằng giữa sự ghép nối và sự gắn kết phải được xem xét cẩn thận khi quyết định có nên sử dụng mối quan hệ dịch vụ máy chủ mở hay không.
-
-Hàm ý
-
-Mối quan hệ dịch vụ máy chủ mở là một loại mối quan hệ giữa các ngữ cảnh giới hạn trong Thiết kế hướng miền. Trong mối quan hệ này, một bối cảnh giới hạn sẽ hiển thị chức năng của nó như một dịch vụ cho một bối cảnh giới hạn khác. Dưới đây là một số ưu và nhược điểm của mối quan hệ này:
-
-Ưu điểm
-
-Cho phép phân tách rõ ràng các mối quan tâm giữa các bối cảnh giới hạn
-
-Khuyến khích kiến trúc hướng dịch vụ và thúc đẩy sự liên kết lỏng lẻo giữa các hệ thống
-
-Cho phép các bối cảnh giới hạn được phát triển và triển khai độc lập
-
-Có thể tạo điều kiện cho khả năng mở rộng bằng cách cho phép các dịch vụ được phân phối trên nhiều hệ thống
-
-Nhược điểm
-
-Có thể tăng thêm độ phức tạp cho hệ thống, đặc biệt là về mặt giao tiếp giữa các dịch vụ
-
-Yêu cầu hợp đồng dịch vụ được xác định rõ ràng để đảm bảo khả năng tương tác giữa các hệ thống
-
-Có thể dẫn đến các vấn đề về hiệu suất nếu có nhiều giao tiếp giữa các dịch vụ
-
-Có thể khiến việc duy trì tính nhất quán giữa các hệ thống trở nên khó khăn hơn, đặc biệt trong trường hợp có lỗi hoặc lỗi một phần
-
-Mối quan hệ dịch vụ máy chủ mở có thể là một công cụ mạnh mẽ để thúc đẩy sự phân tách các mối quan tâm và cho phép phát triển và triển khai độc lập các bối cảnh giới hạn . Tuy nhiên, nó đòi hỏi phải lập kế hoạch và thiết kế cẩn thận để đảm bảo rằng lợi ích lớn hơn những hạn chế.
-
-Ví dụ
-
-Dưới đây là ví dụ về mối quan hệ dịch vụ máy chủ mở giữa các ngữ cảnh giới hạn :
-
-Giả sử chúng ta có hai bối cảnh giới hạn : “Bán hàng” và “Hàng tồn kho”. Bối cảnh giới hạn “Bán hàng” chịu trách nhiệm quản lý các đơn đặt hàng và bối cảnh giới hạn “Hàng tồn kho” chịu trách nhiệm quản lý mức tồn kho của các mặt hàng.
-
-Bối cảnh giới hạn “Bán hàng” cần biết mức tồn kho của các mặt hàng khi xử lý đơn đặt hàng. Thay vì kết hợp chặt chẽ hai bối cảnh giới hạn, chúng có thể thiết lập mối quan hệ dịch vụ máy chủ mở. Ngữ cảnh giới hạn “Hàng tồn kho” hiển thị một API cho ngữ cảnh giới hạn “Bán hàng” để gọi, cung cấp quyền truy cập vào mức tồn kho hiện tại của các mặt hàng.
-
-Ưu điểm của phương pháp này là nó cho phép kết nối lỏng lẻo giữa các bối cảnh giới hạn, cho phép chúng phát triển độc lập. Nhược điểm là nó có thể gây ra các vấn đề phức tạp hơn và tiềm ẩn về hiệu suất nếu dịch vụ máy chủ mở không được thiết kế tốt.
-
-Tóm lại, mối quan hệ dịch vụ máy chủ mở cho phép một ngữ cảnh giới hạn cung cấp dịch vụ có thể được sử dụng bởi một ngữ cảnh giới hạn khác mà không bị liên kết chặt chẽ.
-
-Khi nào nó hoạt động?
-
-Mối quan hệ dịch vụ máy chủ mở hoạt động hiệu quả trong các tình huống sau:
-
-Khi một ngữ cảnh giới hạn cần sử dụng chức năng được cung cấp bởi một ngữ cảnh giới hạn khác.
-
-Khi có nhu cầu giới thiệu khả năng hoặc dịch vụ của miền cho các hệ thống hoặc người dùng bên ngoài.
-
-Khi có yêu cầu về cách tích hợp tiêu chuẩn với các hệ thống hoặc dịch vụ khác.
-
-Trong những tình huống này, mối quan hệ dịch vụ máy chủ mở có thể cung cấp một cách tiêu chuẩn hóa để truy cập chức năng của một bối cảnh hoặc dịch vụ giới hạn khác. Điều này có thể giúp giảm sự ghép nối giữa các hệ thống, trong khi vẫn cho phép chúng tương tác một cách có ý nghĩa.
-
-Khi nào nó không hoạt động?
-
-Mối quan hệ dịch vụ máy chủ mở giữa các bối cảnh giới hạn có thể không hoạt động hiệu quả trong các trường hợp sau:
-
-Các mối lo ngại về bảo mật: Vì mối quan hệ này liên quan đến việc phơi bày các hoạt động nội bộ của một bối cảnh giới hạn này sang một bối cảnh khác, nên các mối lo ngại về bảo mật như vi phạm dữ liệu và truy cập trái phép có thể phát sinh.
-
-Khớp nối chặt chẽ: Mối quan hệ dịch vụ máy chủ mở có thể dẫn đến khớp nối chặt chẽ giữa hai bối cảnh giới hạn, điều này có thể khiến việc thay đổi một bối cảnh giới hạn trở nên khó khăn mà không ảnh hưởng đến bối cảnh kia.
-
-Chi phí liên lạc: Mối quan hệ này yêu cầu liên lạc giữa hai bối cảnh giới hạn, điều này có thể dẫn đến chi phí bổ sung và độ trễ.
-
-Thách thức về bảo trì: Mối quan hệ dịch vụ máy chủ mở yêu cầu duy trì khả năng tương thích ngược cho dịch vụ được cung cấp, điều này có thể trở thành thách thức khi dịch vụ phát triển theo thời gian.
-
-% %! Open - Host Service : https:// thiết kế hướng miền - practitioners.com/open - host - dịch vụ
-
-% %! Open - Host Service : https:// thiết kế hướng miền - practitioners.com/open - host - dịch vụ
-
-% %! Open - Host Service : https:// thiết kế hướng miền - practitioners.com/open - host - dịch vụ
-
-% %! Open - Host Service : https:// thiết kế hướng miền - practitioners.com/open - host - dịch vụ
-
-% %! Open - Host Service : https:// thiết kế hướng miền - practitioners.com/open - host - dịch vụ
-
-% Dịch vụ máy chủ mở : Mối quan hệ này xảy ra khi một bối cảnh giới hạn hiển thị một API công khai, mở mà các ngữ cảnh khác có thể sử dụng. Điều này cho phép các ngữ cảnh khác tận dụng chức năng của ngữ cảnh máy chủ theo cách được tiêu chuẩn hóa.
-
+% Vẽ lại bản đồ tiếng Việt
+% Vẽ lại bản đồ tiếng Việt
+% Vẽ lại bản đồ tiếng Việt
+% Vẽ lại bản đồ tiếng Việt
+% Vẽ lại bản đồ tiếng Việt
+% Vẽ lại bản đồ tiếng Việt
+% Vẽ lại bản đồ tiếng Việt
+% Vẽ lại bản đồ tiếng Việt
+% Từ bản đồ lấy vi dụ cho các mô hình
+% Từ bản đồ lấy vi dụ cho các mô hình
+% Từ bản đồ lấy vi dụ cho các mô hình
+% Từ bản đồ lấy vi dụ cho các mô hình
+% Từ bản đồ lấy vi dụ cho các mô hình
+% Từ bản đồ lấy vi dụ cho các mô hình
+% Từ bản đồ lấy vi dụ cho các mô hình
+% Từ bản đồ lấy vi dụ cho các mô hình
+% Từ bản đồ lấy vi dụ cho các mô hình
+% Từ bản đồ lấy vi dụ cho các mô hình
+\begin{example} Trong miền vấn đề ngân hàng,     thẻ tín dụng và khoản vay mua nhà không có mối quan hệ. 
+    
+    \begin{figure}[H]
+        
+        \centering
+        
+        \includegraphics[scale = 0.5]{pictures/mo_hinh_rieng_biet_separate_ways/main.drawio.png}
+        
+        \caption{Ví dụ  mô hình riêng biệt (Separate Ways)  }
+        
+    \end{figure}
+\end{example} 
