@@ -326,6 +326,20 @@
 
 \centering
 
+\includegraphics[scale = 0.5]{pictures/moi_quan_he_bat_doi_xung/main.drawio.png}
+
+\caption{vvn20206205}
+
+\end{figure}
+
+========================================
+
+========================================
+
+\begin{figure}[H]
+
+\centering
+
 \includegraphics[scale = 0.5]{pictures/mo_hinh_hat_nhan_chung_shared_kernel/main.drawio.png}
 
 \caption{vvn20206205}
