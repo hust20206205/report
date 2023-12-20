@@ -1,107 +1,45 @@
-Mô hình tuân thủ là một mối quan hệ trong đó bối cảnh giới hạn hạ lưu áp dụng mô hình, ngôn ngữ chung và các khái niệm được sử dụng bởi bối cảnh giới hạn thượng nguồn.
+Trong mô hình khách hàng - nhà cung cấp, nếu nhà cung cấp thực hiện tốt yêu cầu  thì     khách hàng    cần tuân thủ chặt chẽ. Mô hình tuân thủ (Conformist)    là một mối quan hệ trong đó bối cảnh giới hạn hạ lưu áp dụng mô hình, ngôn ngữ chung và các khái niệm  của  bối cảnh giới hạn thượng nguồn. 
 
-Cả hai bối cảnh giới hạn đều sử dụng cùng một mô hình. Vì vậy, chúng ta không cần dịch mô hình giữa các bối cảnh giới hạn.
-
-%!! ký hiệu: CF - U - - >
+Trong mô hình   tuân thủ (Conformist)    bối cảnh giới hạn hạ lưu  được ký hiệu là  CF.
 
 %! $VD: - - >
 
 %! $VD: A - CF - U - B - - >
 
-%! $VD: A - users(id, name) - B cũng users(id, name) - - >
+%! $VD: A - users(id, name) - B cũng users(id, name) - - > 
+ 
 
 
 
 
+% Vẽ lại bản đồ tiếng Việt
+% Vẽ lại bản đồ tiếng Việt
+% Vẽ lại bản đồ tiếng Việt
+% Vẽ lại bản đồ tiếng Việt
+% Vẽ lại bản đồ tiếng Việt
+% Vẽ lại bản đồ tiếng Việt
+% Vẽ lại bản đồ tiếng Việt
+% Vẽ lại bản đồ tiếng Việt
+% Từ bản đồ lấy vi dụ cho các mô hình
+% Từ bản đồ lấy vi dụ cho các mô hình
+% Từ bản đồ lấy vi dụ cho các mô hình
+% Từ bản đồ lấy vi dụ cho các mô hình
+% Từ bản đồ lấy vi dụ cho các mô hình
+% Từ bản đồ lấy vi dụ cho các mô hình
+% Từ bản đồ lấy vi dụ cho các mô hình
+% Từ bản đồ lấy vi dụ cho các mô hình
+% Từ bản đồ lấy vi dụ cho các mô hình
+% Từ bản đồ lấy vi dụ cho các mô hình
+\begin{example} Trong miền vấn đề ngân hàng,     thẻ tín dụng và khoản vay mua nhà không có mối quan hệ. 
+    
+    \begin{figure}[H]
+        
+        \centering
+        
+        \includegraphics[scale = 0.5]{pictures/mo_hinh_rieng_biet_separate_ways/main.drawio.png}
+        
+        \caption{Ví dụ  mô hình riêng biệt (Separate Ways)  }
+        
+    \end{figure}
+\end{example} 
 
-
-
-% Người theo chủ nghĩa tuân thủ : Mối quan hệ này tồn tại khi một bối cảnh giới hạn tuân theo cùng một ngôn ngữ và khái niệm phổ biến như một bối cảnh giới hạn khác. Điều này đảm bảo rằng giao tiếp giữa hai bối cảnh là rõ ràng và rõ ràng.
-
-
-
-
-
-% %! Conformist : https:// thiết kế hướng miền - practitioners.com/conformist
-
-% %! Conformist : https:// thiết kế hướng miền - practitioners.com/conformist
-
-% %! Conformist : https:// thiết kế hướng miền - practitioners.com/conformist
-
-% %! Conformist : https:// thiết kế hướng miền - practitioners.com/conformist
-
-% %! Conformist : https:// thiết kế hướng miền - practitioners.com/conformist
-
-Trang chủTrang chủBảng chú giảiBối cảnh giới hạn Mối quan hệ bối cảnh giới hạn người theo chủ nghĩa tuân thủ
-
-người theo chủ nghĩa tuân thủ
-
-Mối quan hệ tuân thủ giữa các ngữ cảnh giới hạn đề cập đến mối quan hệ trong đó một ngữ cảnh giới hạn tuân theo cùng một ngôn ngữ chung và cùng các khái niệm được sử dụng bởi một ngữ cảnh khác bối cảnh giới hạn . Nói cách khác, bối cảnh giới hạn tuân thủ áp dụng mô hình, ngôn ngữ và hành vi của bối cảnh giới hạn khác.
-
-Mối quan hệ này được thiết lập khi một bối cảnh giới hạn là chủ sở hữu rõ ràng của một khái niệm hoặc mô hình miền cụ thể và một bối cảnh giới hạn khác cần tương tác với nó hoặc sử dụng các dịch vụ của nó. Bối cảnh giới hạn tuân thủ cần phải tuân thủ các điều khoản và khái niệm của bối cảnh giới hạn chủ sở hữu để đảm bảo sự tương tác suôn sẻ giữa chúng.
-
-Mối quan hệ tuân thủ là một trong những mối quan hệ ít phổ biến hơn giữa các bối cảnh giới hạn và thường chỉ được thiết lập trong những trường hợp rất cụ thể trong đó hai hoặc nhiều bối cảnh giới hạn chia sẻ các miền rất gần nhau, chẳng hạn như trong trường hợp các vi dịch vụ cần giao tiếp với nhau.
-
-Hàm ý
-
-Mối quan hệ tuân thủ giữa các bối cảnh giới hạn trong thiết kế hướng miền có nghĩa là một bối cảnh giới hạn tuân theo mô hình của bối cảnh giới hạn khác và mọi thay đổi đối với mô hình tuân thủ phải tuân theo mô hình của nhà cung cấp.
-
-Ưu điểm
-
-Giảm độ phức tạp: Bởi vì bối cảnh giới hạn tuân thủ được mô hình hóa theo bối cảnh giới hạn của nhà cung cấp, nên không cần phải xử lý các mô hình khác nhau và hai bối cảnh có thể hoạt động liền mạch với nhau.
-
-Tích hợp dễ dàng: Vì bối cảnh giới hạn tuân thủ được mô hình hóa theo bối cảnh giới hạn của nhà cung cấp, nên rất dễ tích hợp hai bối cảnh với nhau.
-
-Nhược điểm
-
-Mất quyền tự chủ: Bối cảnh giới hạn tuân thủ không thể phát triển độc lập với bối cảnh giới hạn nhà cung cấp và mọi thay đổi đối với mô hình bối cảnh giới hạn nhà cung cấp sẽ cần phải được phản ánh trong mô hình bối cảnh giới hạn tuân thủ.
-
-Sự phụ thuộc vào bối cảnh giới hạn của nhà cung cấp: Bối cảnh giới hạn của nhà cung cấp phụ thuộc rất nhiều vào bối cảnh giới hạn của nhà cung cấp và bất kỳ thay đổi nào đối với bối cảnh giới hạn của nhà cung cấp đều có thể có tác động đáng kể đến bối cảnh giới hạn của nhà cung cấp.
-
-Các vấn đề về hiệu suất có thể xảy ra: Bối cảnh giới hạn tuân thủ có thể phải thực hiện các chuyển đổi hoặc chuyển đổi bổ sung để phù hợp với mô hình bối cảnh giới hạn của nhà cung cấp, điều này có thể ảnh hưởng đến hiệu suất.
-
-Nhìn chung, mối quan hệ tuân thủ có thể hữu ích trong các tình huống trong đó bối cảnh giới hạn của nhà cung cấp có tính ổn định cao và khó có thể thay đổi, đồng thời khi bối cảnh giới hạn tuân thủ yêu cầu mức độ tích hợp cao với bối cảnh giới hạn của nhà cung cấp.
-
-Ví dụ
-
-Dưới đây là ví dụ về mối quan hệ tuân thủ giữa hai bối cảnh giới hạn trong một ứng dụng thương mại điện tử giả định:
-
-Một bối cảnh giới hạn chịu trách nhiệm xử lý các đơn đặt hàng và thanh toán, trong khi một bối cảnh giới hạn khác chịu trách nhiệm quản lý hàng tồn kho. Trong trường hợp này, bối cảnh giới hạn khoảng không quảng cáo sẽ là người tuân thủ và bối cảnh giới hạn đơn hàng và thanh toán sẽ là khách hàng.
-
-Bối cảnh giới hạn khoảng không quảng cáo sẽ cung cấp một giao diện được tiêu chuẩn hóa mà bối cảnh giới hạn đơn đặt hàng và thanh toán có thể sử dụng để truy vấn mức tồn kho và cập nhật số lượng khoảng không quảng cáo. Bối cảnh đặt hàng và thanh toán sẽ tuân theo giao diện này, đảm bảo rằng mọi cập nhật mà nó thực hiện đối với số lượng hàng tồn kho đều được thực hiện theo cách mong đợi.
-
-Ví dụ: ngữ cảnh đơn đặt hàng và thanh toán có thể sử dụng API sau để đặt trước hàng tồn kho khi đặt hàng:
-
-1
-
-<code>inventory.reserve(productId, quantity);
-
-Bối cảnh giới hạn khoảng không quảng cáo sẽ xác định API này và bối cảnh giới hạn đơn đặt hàng và thanh toán sẽ tuân theo API đó. Điều này cho phép hai bối cảnh hoạt động liền mạch với nhau, mặc dù chúng tách biệt và độc lập.
-
-Khi nào nó hoạt động?
-
-Mối quan hệ tuân thủ giữa các bối cảnh giới hạn hoạt động hiệu quả trong các trường hợp sau:
-
-Khi có bối cảnh rõ ràng và chi phối: Bối cảnh giới hạn tuân thủ phải ít phức tạp hơn và ít quan trọng hơn bối cảnh giới hạn chi phối.
-
-Khi bối cảnh tuân thủ có thể chấp nhận những thay đổi: Bối cảnh tuân thủ phải được thiết kế để thích ứng với những thay đổi do bối cảnh thống trị thực hiện.
-
-Khi có ranh giới rõ ràng: Hai bối cảnh phải có ranh giới rõ ràng và khác biệt.
-
-Khi có mối quan hệ ổn định và vững chắc giữa hai bối cảnh: Cả hai bối cảnh cần hiểu rõ trách nhiệm và vai trò của nhau.
-
-Khi bối cảnh tuân thủ có thể cung cấp giá trị cho bối cảnh thống trị: Bối cảnh tuân thủ phải có thể cung cấp thứ gì đó có giá trị cho bối cảnh thống trị.
-
-Khi nào nó không hoạt động?
-
-Mối quan hệ tuân thủ giữa các bối cảnh giới hạn có thể không hoạt động trong các tình huống sau:
-
-Khi bối cảnh giới hạn tuân thủ trở nên quá phức tạp, gây khó khăn cho việc duy trì sự phân tách rõ ràng các mối quan tâm.
-
-Khi có nhu cầu thay đổi thường xuyên trong bối cảnh giới hạn tuân thủ nhưng lại phụ thuộc vào các bối cảnh giới hạn khác nên không yêu cầu thay đổi.
-
-Khi bối cảnh giới hạn tuân thủ được kết hợp quá chặt chẽ với các bối cảnh giới hạn khác, điều này có thể dẫn đến những hậu quả không lường trước được nếu thực hiện thay đổi.
-
-Khi bối cảnh giới hạn tuân thủ được kết nối quá lỏng lẻo với các bối cảnh giới hạn khác, điều này có thể dẫn đến sự thiếu phối hợp và gắn kết trên toàn hệ thống.
-
-Nói chung, mối quan hệ tuân thủ hoạt động tốt nhất khi sự phụ thuộc giữa các bối cảnh giới hạn tương đối đơn giản và ổn định theo thời gian cũng như khi có sự hiểu biết và thỏa thuận rõ ràng giữa các nhóm chịu trách nhiệm về từng bối cảnh giới hạn . 
