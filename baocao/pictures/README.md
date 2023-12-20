@@ -28,7 +28,7 @@ https://www.infoq.com/minibooks/domain-driven-design-quickly
 
 <!--@============================================== -->
 
-Hãy giúp tôi sửa lỗi chính tả và ngữ pháp:
+Hãy giúp tôi sửa lỗi chính tả và ngữ pháp và mạch lạc:
 
 Tóm tắt nội dung theo 10 gạch đầu dòng:
 
