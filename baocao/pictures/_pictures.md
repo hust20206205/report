@@ -312,6 +312,20 @@
 
 \centering
 
+\includegraphics[scale = 0.5]{pictures/mo_hinh_rieng_biet_separate_ways/main.drawio.png}
+
+\caption{vvn20206205}
+
+\end{figure}
+
+========================================
+
+========================================
+
+\begin{figure}[H]
+
+\centering
+
 \includegraphics[scale = 0.5]{pictures/ngon_ngu_chung/main.png}
 
 \caption{vvn20206205}
